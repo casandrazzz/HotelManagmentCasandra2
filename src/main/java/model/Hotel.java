@@ -6,7 +6,7 @@ import java.util.List;
 public class Hotel {
 
     private List<Room> rooms = new ArrayList<Room>();
-    public void displayRooms (Room room) {
+    public void addRoom(Room room) {
         rooms.add ( room );
     }
 

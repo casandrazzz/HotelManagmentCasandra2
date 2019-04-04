@@ -9,6 +9,4 @@ public class Staff  extends Person{
         super ( personName, age, personAddress );
         this.jobDescription = jobDescription;
     }
-
-    Staff person = new Staff ( "Aylin", 24, "West City", "Receptionist" );
 }
