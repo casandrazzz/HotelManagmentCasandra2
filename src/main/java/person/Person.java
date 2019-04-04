@@ -1,4 +1,4 @@
-package model;
+package person;
 
 public class Person {
     private String name;
@@ -6,9 +6,9 @@ public class Person {
     private String adress;
 
     public Person (String name, int age, String address) {
-        this.name = name;
-        this.age = age;
-        this.adress = address;
+        this.setName ( name );
+        this.setAge ( age );
+        this.setAdress ( address );
     }
 
     public String getName() {

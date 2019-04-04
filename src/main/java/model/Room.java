@@ -1,5 +1,9 @@
 package model;
 
+/**
+ * Room has attributes
+ */
+
 
 public class Room {
 
@@ -11,12 +15,6 @@ public class Room {
 
     private boolean cleaned;
 
-    public Room(int roomNumber, String roomType, boolean occupied, boolean cleaned) {
-        this.number = roomNumber;
-        this.type = roomType;
-        this.occupied = occupied;
-        this.cleaned = cleaned;
-    }
 
     public String getType() {
         return type;
