@@ -4,53 +4,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hotel {
-
+    private String name;
+    private String address;
     private List<Room> rooms = new ArrayList<Room>();
-    public void addRoom(Room room) {
-        rooms.add ( room );
+    private List<Staff> staff = new ArrayList<Staff>();
+
+    public String getName() {
+        return name;
     }
 
-    public static void main(String[] args) {
-        Hotel hotel;
-        hotel = new Hotel ();
-        hotel.hotelName();
-        hotel.hotelAdress();
-        hotel.hotelEmail();
-
+    public void setName(String name) {
+        this.name = name;
     }
 
-    private void hotelName() {
-
-        final String firstName;
-        firstName = "ResidenceInn";
-        final String secondName;
-        secondName = "Mariott";
-
-        System.out.println("Welcome to " + firstName + secondName + "!" + "" +
-                " Enjoy the experiece!");
-
+    public String getAddress() {
+        return address;
     }
 
-    private void hotelAdress() {
-
-        final String streetName;
-        streetName = "West Century Boulevard";
-        final int streetNumber = 5963;
-        final String city = "Los Angeles";
-        final String country = "USA";
-
-        System.out.println("We are located on " + streetNumber + ", " + streetName + ", " + city + ", " + country + ". " );
-
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    private void hotelEmail() {
-
-        final String email;
-        email = "residence_inn@mariott_hotels.com";
-        System.out.println("You can contact us by email: " + email + " or by phone: +1 310-568-770. " +
-                "Our operators are always there to answer.");
-
+    public List<Room> getRooms() {
+        return rooms;
     }
 
+    public void setRooms(List<Room> rooms) {
+        this.rooms = rooms;
+    }
 
+    public List<Staff> getStaff() {
+        return staff;
+    }
+
+    public void setStaff(List<Staff> staff) {
+        this.staff = staff;
+    }
 }
