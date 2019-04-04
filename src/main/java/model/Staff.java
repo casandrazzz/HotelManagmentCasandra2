@@ -9,4 +9,12 @@ public class Staff  extends Person{
         super ( personName, age, personAddress );
         this.jobDescription = jobDescription;
     }
+
+    public String getJobDescription() {
+        return jobDescription;
+    }
+
+    public void setJobDescription(String jobDescription) {
+        this.jobDescription = jobDescription;
+    }
 }
