@@ -1,7 +1,10 @@
 package model;
 
 /**
- * Room has attributes
+ * Room has a number from 1 to 100;
+ * Room has a type: DOUBLE, SINGLE, APARTEMENT;
+ * Room has a status: cleaned, occupied etc.
+ *
  */
 
 
@@ -17,38 +20,50 @@ public class Room {
 
 
     public String getType() {
+
         return type;
     }
 
     public void setType(String type) {
+
         this.type = type;
     }
 
 
     public int getNumber() {
-        return number;
+
+                return number;
     }
 
     public void setNumber(int number) {
+
         this.number = number;
     }
 
     public boolean isOccupied() {
+
         return occupied;
     }
 
     public void setOccupied(boolean occupied) {
+
         this.occupied = occupied;
     }
 
     public boolean isCleaned() {
+
         return cleaned;
     }
 
     public void setCleaned(boolean cleaned) {
+
         this.cleaned = cleaned;
     }
 
-}
+    }
+
+
+
+
 
 

@@ -13,6 +13,9 @@ public class MainClass {
         List<Room> rooms;
         rooms = new ArrayList<Room> ();
 
+        System.out.println (rooms.size ());
+        System.out.println (rooms.hashCode ());
+
         for (int i=1; i<33; i++) {
             Room room1 = new Room();
             room1.setNumber(i);
@@ -80,10 +83,11 @@ public class MainClass {
 
         }
 
+              }
 
     }
 
-}
+
 
 
 

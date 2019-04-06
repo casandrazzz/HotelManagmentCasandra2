@@ -12,31 +12,42 @@ import java.util.List;
 public class Hotel {
     private String name;
     private String address;
-    private List<Room> rooms = new ArrayList<Room>();
-    private List<Staff> staff;
-
-    private static final int numberOfrooms = 100;
-
-
+    private List<Room> rooms = new ArrayList<>();
+    private List<Staff> staff = new ArrayList<> (  );
+    private static final int numberOfRooms = 100;
 
     public Hotel() {
+
         setStaff ( new ArrayList<Staff>() );
+        Staff Reception = new Staff ( "Annie", 25, "South", "Receptionist" );
+        Staff Service = new Staff ( "Jane", 28, "East", "Room Service" );
+        staff.add ( Reception );
+        staff.add ( Service );
+        System.out.println (getStaff ());
+
+        System.out.println (getNumberOfRooms ());
+
     }
 
-    public static int getNumberOfrooms() {
-        return numberOfrooms;
+    public static int getNumberOfRooms() {
+
+        return numberOfRooms;
+
     }
 
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public String getAddress() {
+
         return address;
     }
 
@@ -61,8 +72,11 @@ public class Hotel {
     }
 
     public void setStaff(List<Staff> staff) {
+
         this.staff = staff;
     }
 
 
 }
+
+

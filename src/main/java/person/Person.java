@@ -1,9 +1,13 @@
 package person;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Person {
     private String name;
     private int age;
     private String adress;
+
 
     public Person (String name, int age, String address) {
         this.setName ( name );
@@ -12,6 +16,7 @@ public class Person {
     }
 
     public String getName() {
+
         return name;
     }
 
@@ -20,18 +25,22 @@ public class Person {
     }
 
     public int getAge() {
+
         return age;
     }
 
     public void setAge(int age) {
+
         this.age = age;
     }
 
     public String getAdress() {
+
         return adress;
     }
 
     public void setAdress(String adress) {
+
         this.adress = adress;
     }
 }
