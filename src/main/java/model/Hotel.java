@@ -10,40 +10,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hotel {
-    private String name;
-    private String address;
+    private static String name;
+    private static String address;
     private List<Room> rooms = new ArrayList<>();
     private List<Staff> staff = new ArrayList<> (  );
     private static final int numberOfRooms = 100;
 
-    public Hotel() {
 
-        setStaff ( new ArrayList<Staff>() );
-        Staff Reception = new Staff ( "Annie", 25, "South", "Receptionist" );
-        Staff Service = new Staff ( "Jane", 28, "East", "Room Service" );
-        staff.add ( Reception );
-        staff.add ( Service );
-        System.out.println (getStaff ());
 
-        System.out.println (getNumberOfRooms ());
 
+
+
+    public static String getName() {
+
+        return Hotel.name;
     }
 
-    public static int getNumberOfRooms() {
-
-        return numberOfRooms;
-
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "rooms=" + rooms +
+                ", staff=" + staff +
+                '}';
     }
 
+    public  void setName(String name) {
 
-    public String getName() {
-
-        return name;
-    }
-
-    public void setName(String name) {
-
-        this.name = name;
+        this.name = "Residence INN";
     }
 
     public String getAddress() {
@@ -53,7 +46,7 @@ public class Hotel {
 
     public void setAddress(String address) {
 
-        this.address = address;
+        this.address = "LA";
     }
 
     public List<Room> getRooms() {
@@ -75,6 +68,7 @@ public class Hotel {
 
         this.staff = staff;
     }
+
 
 
 }
