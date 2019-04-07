@@ -1,5 +1,4 @@
-package model;
-
+import model.Room;
 import person.Guest;
 import person.Staff;
 
@@ -13,13 +12,6 @@ public class MainClass {
 
         System.out.println("Welcome to our hotel! Enjoy your stay");
 
-        Guest guest1 = new Guest ( "Jane",25,"Germany" );
-        guest1.Interactions ();
-
-
-
-
-
         List<Room> rooms;
         rooms = new ArrayList<> ();
 
@@ -32,18 +24,29 @@ public class MainClass {
 
 
 
-            Staff Reception = new Staff ( "Annie", 25, "South", "Receptionist" );
-            Staff Service = new Staff ( "Jane", 28, "East", "Room Service" );
-            staff.add ( Reception );
-            staff.add ( Service );
-            Reception.Interactions ();
-            Service.Interactions ();
+        Staff reception = new Staff ( "Annie", 25, "South", "Receptionist" );
+        Staff service = new Staff ( "Jane", 28, "East", "Room Service" );
+        staff.add ( reception );
+        staff.add ( service );
+
+
+
             for (int i=0; i<staff.size (); i++) {
-                System.out.println ( staff.get ( i ).getStaff (Reception));
+                System.out.println ( staff.get ( i ).getStaff (reception));
             }
 
-        Guest Guest1 = new Guest ( "james",42,"Holland" );
-        System.out.println ( Guest1.getPreference ());
+
+
+        Guest guest1;
+        guest1 = new Guest ( "J",25, "K" );
+        guest1.setPreference ("DOUBLE");
+        guest1.setName ( "James" );
+        guest1.setAddress ( "Kansas" );
+        guest1.setAge ( 25 );
+
+        System.out.println ("Hello I am " + guest1.getName()  + "."+ " I am from " + guest1.getAddress ()+ " I'd like a " + guest1.getPreference () + " room");
+
+        service.Interactions ();
 
         {
             int i=1;

@@ -14,16 +14,13 @@ public class Hotel {
     private static String address;
     private List<Room> rooms = new ArrayList<>();
     private List<Staff> staff = new ArrayList<> (  );
-    private static final int numberOfRooms = 100;
-
-
+    private static final int totalRooms = 100;
 
 
 
 
     public static String getName() {
-
-        return Hotel.name;
+        return name;
     }
 
     @Override
@@ -36,7 +33,7 @@ public class Hotel {
 
     public  void setName(String name) {
 
-        this.name = "Residence INN";
+        this.name = name;
     }
 
     public String getAddress() {

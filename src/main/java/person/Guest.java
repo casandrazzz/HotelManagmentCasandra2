@@ -9,43 +9,74 @@ public class Guest extends Person {
 
     private Date checkInDate;
     private Date checkOutDate;
+    private String preference;
 
 
-    //perioada de cazare
-    private String preference;   //preferinta pt tipul de camera(...)
+    public Guest(String personName, int age, String personAddress) {
 
-    public Guest(String personName, int age, String personAddress, Date checkInDate, Date checkOutDate, String preference) {
-
-        super ( personName, age, personAddress );
-        this.setCheckInDate ( checkInDate );
+        super ();
+        this.setCheckInDate ();
         this.setCheckOutDate ( checkOutDate );
         this.setPreference ( preference );
 
 
+
+
            }
 
+    public void setPreference() {
+        preference = "DOUBLE";
+    }
+
     public Date getCheckInDate() {
+
         return checkInDate;
     }
 
-    public void setCheckInDate(Date checkInDate) {
+    public void setCheckInDate () {
+
         this.checkInDate = checkInDate;
     }
 
     public Date getCheckOutDate() {
+
         return checkOutDate;
     }
 
     public void setCheckOutDate(Date checkOutDate) {
+
         this.checkOutDate = checkOutDate;
     }
 
     public String getPreference() {
+
         return preference;
     }
 
     public void setPreference(String preference) {
+
         this.preference = preference;
+    }
+
+    @Override
+    public void Interactions() {
+
+
+        System.out.println ("Hello, I would like to book a room.");
+
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
     }
 }
 

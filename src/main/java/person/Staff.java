@@ -2,6 +2,7 @@ package person;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Staff extends Person because it has name, address and age.
@@ -14,7 +15,8 @@ public class Staff  extends Person {
 
 
     public Staff(String personName, int age, String personAddress, String jobDescription) {
-        super ( personName, age, personAddress );
+        super ();
+
         this.setJobDescription ( jobDescription );
     }
 
@@ -34,7 +36,7 @@ public class Staff  extends Person {
     /**
      * Staff offers information about room price for room type
      */
-    public static void giveInformation() {
+   /* public void giveInformation() {
         if (jobDescription.contains ( "Receptionist" )) {
             System.out.println ( "Welcome!" );
 
@@ -49,12 +51,12 @@ public class Staff  extends Person {
             System.out.println ( "Hello! I will take you to the Reception" );
 
 
-        }
+        }*/
 
 
-    }
 
-    public List<Staff> getStaff() {
+
+    public List<Staff> getStaff(Staff reception) {
         return staff;
     }
 
@@ -65,4 +67,25 @@ public class Staff  extends Person {
     }
 
 
-}
+    @Override
+    public void Interactions() {
+
+        System.out.println ("Here is the list of rooms we have. Enter a number corresponding to the type of room you want, 1 to 33 are single rooms, 34 to 65 are double rooms and 66 to 100 are apartments");
+
+        Scanner reader = new Scanner ( System.in );
+        int n = reader.nextInt ();
+
+        System.out.println (n);
+
+        for (n=5; n<=14; n++);{
+            System.out.println ("The room is already booked");
+        }
+
+        for (n=1; n<5; n++);{
+            System.out.println ("You have booked your room");
+        }
+
+        }
+
+    }
+

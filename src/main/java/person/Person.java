@@ -1,46 +1,34 @@
 package person;
 
-import java.util.ArrayList;
-import java.util.List;
 
-public class Person {
-    private String name;
-    private int age;
-    private String adress;
+public abstract class Person {
+    public String name;
+    public int age;
+    public String address;
 
 
-    public Person (String name, int age, String address) {
+      public Person() {
         this.setName ( name );
         this.setAge ( age );
-        this.setAdress ( address );
+        this.setAddress ( address );
     }
 
-    public String getName() {
 
-        return name;
-    }
 
-    public void setName(String name) {
+      public void setName(String name) {
         this.name = name;
     }
 
-    public int getAge() {
-
-        return age;
-    }
-
-    public void setAge(int age) {
+      public void setAge(int age) {
 
         this.age = age;
     }
 
-    public String getAdress() {
+     public void setAddress(String address) {
 
-        return adress;
+        this.address = address;
     }
 
-    public void setAdress(String adress) {
+    public abstract void Interactions();
 
-        this.adress = adress;
-    }
 }
