@@ -77,15 +77,15 @@ public class Staff  extends Person {
 
         System.out.println (n);
 
-        for (n=5; n<=14; n++);{
-            System.out.println ("The room is already booked");
-        }
-
-        for (n=1; n<5; n++);{
-            System.out.println ("You have booked your room");
-        }
 
         }
+
+    @Override
+    public void Pay() {
 
     }
+
+}
+
+
 

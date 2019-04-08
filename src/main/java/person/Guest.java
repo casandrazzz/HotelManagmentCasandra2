@@ -67,6 +67,13 @@ public class Guest extends Person {
 
     }
 
+    @Override
+    public void Pay() {
+
+
+
+    }
+
     public String getName() {
         return name;
     }

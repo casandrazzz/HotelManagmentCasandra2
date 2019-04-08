@@ -3,16 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="30339ffd-88c3-4efe-a473-9410641c6702" name="Default Changelist" comment="modified">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HotelApp/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/person/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/person/Guest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/person/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/person/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/person/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Hotel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/MainClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/person/Guest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/person/Guest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/person/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/person/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/person/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/person/Staff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainClass.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="176">
+              <caret line="23" column="28" selection-start-line="22" selection-start-column="4" selection-end-line="23" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -49,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/person/Staff.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="17">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="78" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1376#1377#0" expanded="true" />
@@ -65,23 +61,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/person/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-              <folding>
-                <element signature="e#351#352#0" expanded="true" />
-                <element signature="e#383#384#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-83">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="68">
+              <caret line="4" column="101" selection-start-line="4" selection-start-column="101" selection-end-line="4" selection-end-column="101" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#417#418#0" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,17 +89,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/person/Guest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+            <state relative-caret-position="1095">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/HotelApp/MainClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="132" column="73" selection-start-line="132" selection-start-column="73" selection-end-line="132" selection-end-column="73" />
               <folding>
-                <element signature="e#539#540#0" expanded="true" />
-                <element signature="e#569#570#0" expanded="true" />
-                <element signature="e#1126#1127#0" expanded="true" />
-                <element signature="e#1153#1154#0" expanded="true" />
-                <element signature="e#1193#1194#0" expanded="true" />
-                <element signature="e#1225#1226#0" expanded="true" />
-                <element signature="e#1257#1258#0" expanded="true" />
-                <element signature="e#1286#1287#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,13 +125,15 @@
         <option value="$PROJECT_DIR$/src/main/java/model/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Staff.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Guest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Room.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/MainClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Hotel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/person/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/java/person/Guest.java" />
         <option value="$PROJECT_DIR$/src/main/java/MainClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/person/Staff.java" />
+        <option value="$PROJECT_DIR$/src/main/java/person/Guest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/person/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/VIP.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/HotelApp/MainClass.java" />
       </list>
     </option>
   </component>
@@ -159,8 +148,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -200,6 +189,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="HotelManagmentCasandra2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HotelManagmentCasandra2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -210,7 +207,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554656646425" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554718630925" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -231,7 +228,7 @@
   </component>
   <component name="RunManager" selected="Application.MainClass">
     <configuration name="MainClass" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainClass" />
+      <option name="MAIN_CLASS_NAME" value="HotelApp.MainClass" />
       <module name="HotelManagmentCasandra2" />
       <extension name="coverage">
         <pattern>
@@ -298,11 +295,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="676" y="0" width="697" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49874055" weight="0.6766091" />
-      <window_info id="Structure" order="1" sideWeight="0.50125945" side_tool="true" weight="0.35854766" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49447513" weight="0.5714286" />
+      <window_info id="Structure" order="1" sideWeight="0.5055249" side_tool="true" weight="0.5714286" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -312,7 +309,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.3282313" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3282313" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34774774" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -328,8 +325,8 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.24886535" />
-      <window_info anchor="right" id="Maven" order="8" weight="0.68078667" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.68078667" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.24803768" />
     </layout>
     <layout-to-restore>
       <window_info id="Image Layers" order="0" />
@@ -370,43 +367,8 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/person/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding>
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/person/Guest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-          <folding>
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#1126#1127#0" expanded="true" />
-            <element signature="e#1153#1154#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-            <element signature="e#1225#1226#0" expanded="true" />
-            <element signature="e#1257#1258#0" expanded="true" />
-            <element signature="e#1286#1287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Hotel.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -420,10 +382,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/person/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="101" selection-start-line="4" selection-start-column="101" selection-end-line="4" selection-end-column="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/person/Staff.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="17">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="78" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1376#1377#0" expanded="true" />
@@ -434,10 +408,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/person/Guest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-83">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="1095">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/VIP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="23" column="28" selection-start-line="22" selection-start-column="4" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HotelApp/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="132" column="73" selection-start-line="132" selection-start-column="73" selection-end-line="132" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
