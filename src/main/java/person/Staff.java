@@ -83,6 +83,8 @@ public class Staff  extends Person {
     @Override
     public void Pay() {
 
+        System.out.println ("How would you like to pay?");
+
     }
 
 }

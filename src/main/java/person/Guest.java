@@ -25,6 +25,7 @@ public class Guest extends Person {
            }
 
     public void setPreference() {
+
         preference = "DOUBLE";
     }
 
@@ -70,19 +71,24 @@ public class Guest extends Person {
     @Override
     public void Pay() {
 
+        System.out.println ("Cash");
+
 
 
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
-    public String getAddress() {
+    public String getAddress()
+    {
         return address;
     }
 }

@@ -1,5 +1,6 @@
 package HotelApp;
 
+import model.Hotel;
 import model.Room;
 import person.Guest;
 import person.Staff;
@@ -131,7 +132,13 @@ public class MainClass {
             if (prices[i] > largest) {
                 largest = prices[i];
                 System.out.println ("We also have the VIP room" + largest);
-            }}}}
+            }
+        }
+        service.Pay ();
+
+
+    }
+}
 
 
 
