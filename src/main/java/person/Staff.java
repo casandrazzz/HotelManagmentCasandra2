@@ -1,7 +1,5 @@
 package person;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -9,28 +7,25 @@ import java.util.Scanner;
  * Staff has a job description according to the task, e.g giveInformation = receptionist
  */
 
-public class Staff  extends Person {
+public class Staff extends Person {
 
     private static String jobDescription;
 
 
     public Staff(String personName, int age, String personAddress, String jobDescription) {
-        super ();
+        super ( personName, age, personAddress );
 
         this.setJobDescription ( jobDescription );
     }
 
-
-    List<Staff> staff = new ArrayList<> ();
-
-    private String getJobDescription() {
+    public String getJobDescription() {
         jobDescription = jobDescription;
         return jobDescription;
     }
 
-    private void setJobDescription(String jobDescription) {
+    public void setJobDescription(String jobDescription) {
 
-        this.jobDescription = jobDescription;
+        Staff.jobDescription = jobDescription;
     }
 
     /**
@@ -52,41 +47,47 @@ public class Staff  extends Person {
 
 
         }*/
-
-
-
-
-    public List<Staff> getStaff(Staff reception) {
-        return staff;
-    }
-
-
-
-    public void setStaff(List<Staff> staff) {
-        this.staff = staff;
-    }
-
-
     @Override
-    public void Interactions() {
+    public void interactions() {
 
-        System.out.println ("Here is the list of rooms we have. Enter a number corresponding to the type of room you want, 1 to 33 are single rooms, 34 to 65 are double rooms and 66 to 100 are apartments");
+        System.out.println ( "Here is the list of rooms we have. Enter a number corresponding to the type of room you want, 1 to 33 are single rooms, 34 to 65 are double rooms and 66 to 100 are apartments" );
 
         Scanner reader = new Scanner ( System.in );
         int n = reader.nextInt ();
 
-        System.out.println (n);
+        System.out.println ( n );
 
-
-        }
-
-    @Override
-    public void Pay() {
-
-        System.out.println ("How would you like to pay?");
 
     }
 
+    public void askGuest () {
+        System.out.println ("How many days would you like to stay");
+
+        Scanner reader = new Scanner ( System.in );
+        int days = reader.nextInt ();
+        int costOfStay = days * 200;
+        System.out.println ( "You have to pay " + costOfStay + "$");
+    }
+
+    @Override
+    public int pay(int days, int price) {
+        return 0;
+    }
+
+
+
+
+
+    /**
+     * Cost of stay
+     */
+
+
+
+    @Override
+    public String toString() {
+        return getName () + " - " + getJobDescription ();
+    }
 }
 
 

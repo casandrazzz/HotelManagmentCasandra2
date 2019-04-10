@@ -6,26 +6,32 @@ package person;
  */
 
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.util.Calendar;
-import java.util.Date;
-
 public abstract class Person {
-    public String name;
-    public int age;
-    public String address;
+    private String name;
+    private int age;
+    private String address;
+    private String Period;
 
 
-      public Person() {
+      public Person (String name, int age, String address) {
         this.setName ( name );
         this.setAge ( age );
         this.setAddress ( address );
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public int getAge() {
+        return age;
+    }
 
-      public void setName(String name) {
+    public String getAddress() {
+        return address;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -39,22 +45,7 @@ public abstract class Person {
         this.address = address;
     }
 
-    public abstract void Interactions();
-    public abstract void Pay();
-    public int DaysBetweenDates(String checkIn, String checkOut)throws ParseException {
-        DateFormat date = DateFormat.getDateInstance ();
-        Date dateStart = date.parse ( checkIn );
-        Date dateEnd = date.parse ( checkOut );
+    public abstract void interactions();
 
-        Calendar dayStart = Calendar.getInstance ();
-        Calendar dayEnd = Calendar.getInstance ();
-
-        dayStart.setTime ( dateStart );
-        dayEnd.setTime ( dateEnd );
-
-        int days = dayStart.get(Calendar.DAY_OF_YEAR) - dayEnd.get(Calendar.DAY_OF_YEAR);
-        return days;
-    }
-
-
-    }
+    public abstract int pay(int days, int price);
+}

@@ -14,15 +14,9 @@ public class Guest extends Person {
 
     public Guest(String personName, int age, String personAddress) {
 
-        super ();
-        this.setCheckInDate ();
-        this.setCheckOutDate ( checkOutDate );
-        this.setPreference ( preference );
+        super ( personName, age, personAddress );
+    }
 
-
-
-
-           }
 
     public void setPreference() {
 
@@ -34,7 +28,7 @@ public class Guest extends Person {
         return checkInDate;
     }
 
-    public void setCheckInDate () {
+    public void setCheckInDate(Date checkInDate) {
 
         this.checkInDate = checkInDate;
     }
@@ -60,36 +54,26 @@ public class Guest extends Person {
     }
 
     @Override
-    public void Interactions() {
+    public void interactions() {
 
 
-        System.out.println ("Hello, I would like to book a room.");
+        System.out.println ( "Hello, I would like to book a room." );
 
 
     }
 
     @Override
-    public void Pay() {
+    public int pay(int days, int price) {
+        return 0;
+    }
 
-        System.out.println ("Cash");
-
-
+    public int computePeriod(Date checkIn, Date checkOut) {
+        long days = checkOut.getTime () - checkIn.getTime ();
+        return (int) days / (1000 * 60 * 60 * 24);
 
     }
 
-    public String getName()
-    {
-        return name;
-    }
 
-    public void setName(String name) {
-
-        this.name = name;
-    }
-
-    public String getAddress()
-    {
-        return address;
-    }
 }
+
 

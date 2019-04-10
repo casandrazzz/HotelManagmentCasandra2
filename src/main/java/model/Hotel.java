@@ -13,11 +13,7 @@ public class Hotel {
     private static String name;
     private static String address;
     private List<Room> rooms = new ArrayList<>();
-    private List<Staff> staff = new ArrayList<> (  );
-    private static final int stars = 5;
-
-
-
+    private List<Staff> staff = new ArrayList<> ();
 
 
     @Override

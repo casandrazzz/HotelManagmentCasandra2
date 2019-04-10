@@ -14,14 +14,14 @@ public class Room {
 
     private int number;
 
+    private int price;
+
     private String type;
 
     private boolean occupied;
 
     private boolean cleaned;
 
-    int [] price = {100,200,300};
-    int largest = price [0];
 
     public String getType() {
 
@@ -36,12 +36,20 @@ public class Room {
 
     public int getNumber() {
 
-                return number;
+        return number;
     }
 
     public void setNumber(int number) {
 
         this.number = number;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public boolean isOccupied() {
@@ -64,10 +72,25 @@ public class Room {
         this.cleaned = cleaned;
     }
 
+    public int displayApartmentPrice() {
+        int[] prices = {100, 200, 300};
+        int largest = prices[0];
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] > largest) {
+                largest = prices[i];
+
+            }
+        }
+
+        return largest;}
+
+}
 
 
 
-    }
+
+
+
 
 
 
