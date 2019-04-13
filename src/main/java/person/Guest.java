@@ -53,7 +53,7 @@ public class Guest extends Person {
         this.preference = preference;
     }
 
-    @Override
+
     public void interactions() {
 
 
@@ -62,7 +62,7 @@ public class Guest extends Person {
 
     }
 
-    @Override
+
     public int pay(int days, int price) {
         return 0;
     }

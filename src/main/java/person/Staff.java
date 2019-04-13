@@ -9,23 +9,21 @@ import java.util.Scanner;
 
 public class Staff extends Person {
 
-    private static String jobDescription;
+    private  String jobDescription;
 
 
-    public Staff(String personName, int age, String personAddress, String jobDescription) {
+    public Staff(String personName, int age, String personAddress) {
         super ( personName, age, personAddress );
 
-        this.setJobDescription ( jobDescription );
     }
 
+
     public String getJobDescription() {
-        jobDescription = jobDescription;
         return jobDescription;
     }
 
     public void setJobDescription(String jobDescription) {
-
-        Staff.jobDescription = jobDescription;
+        this.jobDescription = jobDescription;
     }
 
     /**
@@ -47,7 +45,7 @@ public class Staff extends Person {
 
 
         }*/
-    @Override
+
     public void interactions() {
 
         System.out.println ( "Here is the list of rooms we have. Enter a number corresponding to the type of room you want, 1 to 33 are single rooms, 34 to 65 are double rooms and 66 to 100 are apartments" );
@@ -69,7 +67,7 @@ public class Staff extends Person {
         System.out.println ( "You have to pay " + costOfStay + "$");
     }
 
-    @Override
+
     public int pay(int days, int price) {
         return 0;
     }

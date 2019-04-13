@@ -6,14 +6,14 @@ package person;
  */
 
 
-public abstract class Person {
+public class Person {
     private String name;
     private int age;
     private String address;
-    private String Period;
 
 
-      public Person (String name, int age, String address) {
+
+    public Person (String name, int age, String address) {
         this.setName ( name );
         this.setAge ( age );
         this.setAddress ( address );
@@ -45,7 +45,6 @@ public abstract class Person {
         this.address = address;
     }
 
-    public abstract void interactions();
 
-    public abstract int pay(int days, int price);
 }
+

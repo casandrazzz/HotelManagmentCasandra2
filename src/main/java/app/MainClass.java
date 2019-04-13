@@ -1,5 +1,8 @@
 package app;
 
+import model.Constants;
+import model.Establishment;
+import model.Hotel;
 import model.Room;
 import person.Guest;
 import person.Staff;
@@ -15,22 +18,38 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-        System.out.println ( "Welcome to our hotel! Enjoy your stay" );
+        Hotel hotel = new Hotel ();
+        hotel.defineEstablishmentType ();
+        hotel.displayEstablishmentLocation ();
+        hotel.displayEstablishmentWorkingHours ();
+
+
+        System.out.println ( Constants.WELCOME_MESSAGE );
+        System.out.println (Constants.CALL_CENTER);
+
 
         List<Room> rooms;
         rooms = new ArrayList<> ();
 
         List<Staff> staff = new ArrayList<> ();
 
-        Staff receptionist = new Staff ( "Annie", 25, "South", "Receptionist" );
-        Staff hostess = new Staff ( "Jane", 28, "East", "Host events" );
-        Staff valet = new Staff ( "Richard", 40, "North", "Follow guests and holds their purse" );
+        Staff receptionist = new Staff ( "Annie", 25, "South" );
+        Staff hostess = new Staff ( "Jane", 28, "East" );
+        Staff valet = new Staff ( "Richard", 40, "North" );
+        Staff maid = new Staff ("Chris", 35, "West");
+        receptionist.setJobDescription ( "Receive visitors at the front desk by greeting, welcoming, directing and announcing them appropiately" );
+        hostess.setJobDescription ( "Present a positive first impression of the establishment's friendliness, excellent service and high standards" );
+        valet.setJobDescription ( "Stand in front of the establishment, get key from the drivers, help with any luggage" );
+        maid.setJobDescription ( "Clean and tidy all areas to the standard cleaniness whithin time limits" );
         staff.add ( receptionist );
         staff.add ( hostess );
         staff.add ( valet );
+        staff.add (maid);
         //System.out.println ( rooms.size () );
         //System.out.println ( rooms.hashCode () );
         System.out.println ( "Total number of staff is " + staff.size () );
+        System.out.println (receptionist + " - " + receptionist.getJobDescription ());
+
 
         for (int i = 0; i < staff.size (); i++) {
             System.out.println ( staff.get ( i ).toString () );
@@ -41,6 +60,7 @@ public class MainClass {
         guest1.setPreference ( "DOUBLE" );
         guest1.interactions ();
         guest1.setCheckInDate ( new Date () );
+
 
         /*try
         {

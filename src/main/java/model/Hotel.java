@@ -9,11 +9,13 @@ import person.Staff;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Hotel {
-    private static String name;
-    private static String address;
+public class Hotel implements Establishment{
+    //private String name;
+    //private String address;
     private List<Room> rooms = new ArrayList<>();
     private List<Staff> staff = new ArrayList<> ();
+
+
 
 
     @Override
@@ -25,6 +27,32 @@ public class Hotel {
     }
 
 
+    @Override
+    public void defineEstablishmentType() {
+
+        String establishmentType = "Hotel";
+
+        System.out.println (establishmentType);
+
+    }
+
+    @Override
+    public void displayEstablishmentLocation() {
+
+        String establishmentLocation = "Urban";
+
+        System.out.println (establishmentLocation);
+
+    }
+
+    @Override
+    public void displayEstablishmentWorkingHours() {
+
+        String establishmentWorkingHours = "Nonstop";
+
+        System.out.println (establishmentWorkingHours);
+
+    }
 }
 
 
