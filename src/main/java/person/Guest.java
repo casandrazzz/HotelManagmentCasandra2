@@ -3,10 +3,10 @@ package person;
 import java.util.Date;
 
 
-
 public class Guest extends Person {
 
 
+    public static int nightsOfStay;
     private Date checkInDate;
     private Date checkOutDate;
     private String preference;
@@ -18,30 +18,11 @@ public class Guest extends Person {
     }
 
 
-    public void setPreference() {
-
-        preference = "DOUBLE";
-    }
-
-    public Date getCheckInDate() {
-
-        return checkInDate;
-    }
-
     public void setCheckInDate(Date checkInDate) {
 
         this.checkInDate = checkInDate;
     }
 
-    public Date getCheckOutDate() {
-
-        return checkOutDate;
-    }
-
-    public void setCheckOutDate(Date checkOutDate) {
-
-        this.checkOutDate = checkOutDate;
-    }
 
     public String getPreference() {
 
@@ -53,6 +34,15 @@ public class Guest extends Person {
         this.preference = preference;
     }
 
+    public int getNightsOfStay() {
+
+        return nightsOfStay;
+    }
+
+    public void setNightsOfStay(int nightsOfStay) {
+
+        Guest.nightsOfStay = nightsOfStay;
+    }
 
     public void interactions() {
 
@@ -62,8 +52,17 @@ public class Guest extends Person {
 
     }
 
+    @Override
+    public String toString() {
+        return getName () + " - " + getPreference () + "-" + getNightsOfStay () + " nights.";
+    }
+}
 
-    public int pay(int days, int price) {
+
+
+
+   /* public int pay(int days, int price) {
+
         return 0;
     }
 
@@ -71,9 +70,9 @@ public class Guest extends Person {
         long days = checkOut.getTime () - checkIn.getTime ();
         return (int) days / (1000 * 60 * 60 * 24);
 
-    }
+    }*/
 
 
-}
+
 
 

@@ -5,6 +5,7 @@ package model;
  */
 
 import person.Staff;
+import room.Room;
 
 import java.util.ArrayList;
 import java.util.List;

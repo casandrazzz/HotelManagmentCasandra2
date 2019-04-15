@@ -19,19 +19,24 @@ public class Person {
         this.setAddress ( address );
     }
 
+    public Person(String name){
+        this.setName ( name );
+
+    }
+
+
     public String getName() {
+
         return name;
     }
 
-    public int getAge() {
-        return age;
-    }
 
     public String getAddress() {
         return address;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 

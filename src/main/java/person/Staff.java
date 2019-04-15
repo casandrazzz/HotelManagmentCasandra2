@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Staff extends Person {
 
-    private  String jobDescription;
+    private String jobDescription;
 
 
     public Staff(String personName, int age, String personAddress) {
@@ -17,34 +17,23 @@ public class Staff extends Person {
 
     }
 
+    public Staff(String personName) {
+        super ( personName );
+    }
+
 
     public String getJobDescription() {
         return jobDescription;
     }
 
-    public void setJobDescription(String jobDescription) {
+    public String setJobDescription(String jobDescription) {
         this.jobDescription = jobDescription;
+        return jobDescription;
     }
 
     /**
      * Staff offers information about room price for room type
      */
-   /* public void giveInformation() {
-        if (jobDescription.contains ( "Receptionist" )) {
-            System.out.println ( "Welcome!" );
-
-        } else {
-            System.out.println ( "Hello! I will take you to the Reception" );
-        }
-
-        if (jobDescription.contains ( "Room Service" )) {
-            System.out.println ( "What can I do for you?" );
-
-        } else {
-            System.out.println ( "Hello! I will take you to the Reception" );
-
-
-        }*/
 
     public void interactions() {
 
@@ -58,28 +47,30 @@ public class Staff extends Person {
 
     }
 
-    public void askGuest () {
-        System.out.println ("How many days would you like to stay");
-
-        Scanner reader = new Scanner ( System.in );
-        int days = reader.nextInt ();
-        int costOfStay = days * 200;
-        System.out.println ( "You have to pay " + costOfStay + "$");
-    }
-
-
-    public int pay(int days, int price) {
-        return 0;
-    }
-
-
-
-
-
     /**
-     * Cost of stay
+     * Offer applies to minimum five nights of stay.
+     * Have to check if guest nights of stay >= 5, then apply discount to costOfStay.
      */
+    public void presentOffer() {
 
+        System.out.println ( "For at least 5 days at our hotel you can get 50% discount" );
+
+        if (Guest.nightsOfStay >= 5) {
+            System.out.println ("Discount applies for" + Guest.nightsOfStay + "nights of stay");
+        } else {
+            System.out.println ( "Discount does not apply" );
+
+        }
+    }
+
+        public void askGuest () {
+            System.out.println ( "How many nights would you like to stay" );
+
+            Scanner reader = new Scanner ( System.in );
+            int nights = reader.nextInt ();
+            int costOfStay = nights * 200;
+            System.out.println ( "You have to pay " + costOfStay + "$" );
+        }
 
 
     @Override
@@ -87,6 +78,7 @@ public class Staff extends Person {
         return getName () + " - " + getJobDescription ();
     }
 }
+
 
 
 

@@ -1,12 +1,14 @@
-package model;
+package room;
+
+
+import person.Guest;
 
 /**
  * Room has a number from 1 to 100;
- * Room has a type: DOUBLE, SINGLE, APARTEMENT;
+ * Room has a type: DOUBLE, SINGLE, APARTEMENT-> to do Enum for user input; also room types are extended in classes to define properly their attributes
  * Room has a status: cleaned, occupied etc.
- * Overload room constructor for the vip room, that has the highest price. Array is used also for printing the highest price.
- *
- *
+ * Array is used also for printing the highest price.
+ * Room has a method to calculate the cost of stay, which is overridden in Apartment, StandardRoom, DoubleRoom, Penthouse classes.
  */
 
 
@@ -45,10 +47,12 @@ public class Room {
     }
 
     public int getPrice() {
+
         return price;
     }
 
     public void setPrice(int price) {
+
         this.price = price;
     }
 
@@ -72,6 +76,7 @@ public class Room {
         this.cleaned = cleaned;
     }
 
+
     public int displayApartmentPrice() {
         int[] prices = {100, 200, 300};
         int largest = prices[0];
@@ -82,7 +87,13 @@ public class Room {
             }
         }
 
-        return largest;}
+        return largest;
+    }
+
+    public double calculateCostOfStay() {
+        return price * Guest.nightsOfStay;
+
+    }
 
 }
 
