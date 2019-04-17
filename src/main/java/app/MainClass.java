@@ -1,6 +1,7 @@
 package app;
 
 import model.*;
+import person.Gambler;
 import person.Guest;
 import person.Staff;
 import room.Apartment;
@@ -184,6 +185,9 @@ public class MainClass {
         casino.displayEstablishmentLocation ();
         casino.displayEstablishmentWorkingHours ();
         casino.presentGames ();
+
+        Gambler gambler = new Gambler ( "Bruce", 28, "Florida", 200 );
+        gambler.checkMinimumAge ();
 
 
 

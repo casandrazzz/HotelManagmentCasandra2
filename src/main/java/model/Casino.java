@@ -14,6 +14,7 @@ public class Casino implements Establishment {
     @Override
     public void defineEstablishmentType() {
         System.out.println ( "This is a Casino" );
+        System.out.println ( "Persons under " + MINIMUM_AGE + "are not allowed" );
 
     }
 

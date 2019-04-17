@@ -5,11 +5,13 @@ import java.util.Scanner;
 /**
  * Staff extends Person because it has name, address and age.
  * Staff has a job description according to the task, e.g giveInformation = receptionist
+ * Staff gets a minimum salary.
  */
 
 public class Staff extends Person {
 
     private String jobDescription;
+    private int salary;
 
 
     public Staff(String personName, int age, String personAddress) {
@@ -56,21 +58,21 @@ public class Staff extends Person {
         System.out.println ( "For at least 5 days at our hotel you can get 50% discount" );
 
         if (Guest.nightsOfStay >= 5) {
-            System.out.println ("Discount applies for" + Guest.nightsOfStay + "nights of stay");
+            System.out.println ( "Discount applies for" + Guest.nightsOfStay + "nights of stay" );
         } else {
             System.out.println ( "Discount does not apply" );
 
         }
     }
 
-        public void askGuest () {
-            System.out.println ( "How many nights would you like to stay" );
+    public void askGuest() {
+        System.out.println ( "How many nights would you like to stay" );
 
-            Scanner reader = new Scanner ( System.in );
-            int nights = reader.nextInt ();
-            int costOfStay = nights * 200;
-            System.out.println ( "You have to pay " + costOfStay + "$" );
-        }
+        Scanner reader = new Scanner ( System.in );
+        int nights = reader.nextInt ();
+        int costOfStay = nights * 200;
+        System.out.println ( "You have to pay " + costOfStay + "$" );
+    }
 
 
     @Override

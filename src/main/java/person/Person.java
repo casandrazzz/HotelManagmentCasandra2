@@ -8,7 +8,7 @@ package person;
 
 public class Person {
     private String name;
-    private int age;
+    protected int age;
     private String address;
 
 
@@ -26,6 +26,7 @@ public class Person {
 
 
     public String getName() {
+
 
         return name;
     }
