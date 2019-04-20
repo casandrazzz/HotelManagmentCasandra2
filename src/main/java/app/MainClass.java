@@ -1,13 +1,17 @@
 package app;
 
-import model.*;
-import person.Gambler;
-import person.Guest;
-import person.Staff;
-import room.Apartment;
-import room.DoubleRoom;
-import room.Penthouse;
-import room.Room;
+import model.Casino;
+import model.Games;
+import model.Hotel;
+import model.Gambler;
+import model.Guest;
+import model.Staff;
+import model.Apartment;
+import model.DoubleRoom;
+import model.Penthouse;
+import model.Room;
+import repository.HotelRepository;
+import service.HotelService;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -189,6 +193,22 @@ public class MainClass {
         Gambler gambler = new Gambler ( "Bruce", 28, "Florida", 200 );
         gambler.checkMinimumAge ();
 
+        Hotel hotel1 = new Hotel ();
+        Hotel hotel2 = new Hotel ();
+
+
+
+
+        HotelRepository hotelRepository = new HotelRepository ();
+        HotelService hotelService = new HotelService ( hotelRepository );
+        hotelService.validateAndAddHotels ( hotel1 );
+        hotelService.validateAndAddHotels ( hotel2 );
+        hotel1.setName ( "Majestic" );
+        hotel2.setName ( "a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9" );
+        System.out.println (hotel1.getName () + hotelService.validateAndAddHotels ( hotel1 ));
+        System.out.println (hotel2.getName () + hotelService.validateAndAddHotels ( hotel2 ));
+        //hotelService.delete ( hotel2 );
+        System.out.println (hotel2.getName ()+hotelService.delete ( hotel2 ));
 
 
 

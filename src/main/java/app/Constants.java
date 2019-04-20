@@ -9,4 +9,5 @@ public class Constants {
     public final static double MAXIMUM_CASINO_WIN = 2500;
 
 
+
     }

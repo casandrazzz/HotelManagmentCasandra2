@@ -4,28 +4,40 @@ package model;
  * Hotel has a list of rooms and a list of staff, name and address;
  */
 
-import person.Staff;
-import room.Room;
+import repository.HotelRepository;
 
-import java.util.ArrayList;
-import java.util.List;
+public class Hotel implements Establishment {
+    private String name;
+    private String address;
 
-public class Hotel implements Establishment{
-    //private String name;
-    //private String address;
-    private List<Room> rooms = new ArrayList<>();
-    private List<Staff> staff = new ArrayList<> ();
+    public Hotel () {
+        this.name = name;
+        this.address = address;
+    }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName (String name) {
+        this.name = name;
+    }
 
+    public String getAddress() {
+        return address;
+    }
 
-    @Override
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    /*@Override
     public String toString() {
         return "Hotel{" +
-                "rooms=" + rooms +
-                ", staff=" + staff +
-                '}';
-    }
+                "rooms=" + HotelRepository.rooms +
+                ", staff=" + HotelRepository.staff +
+                ", guests" + HotelRepository.guests;
+    }*/
 
 
     @Override
