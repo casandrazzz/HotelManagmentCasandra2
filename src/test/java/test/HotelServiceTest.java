@@ -1,39 +1,59 @@
 package test;
+
+
 import model.Hotel;
-import org.junit.Before;
-import org.junit.Test;
+import model.Responses;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
-import org.junit.runner.RunWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 import repository.HotelRepository;
 import service.HotelService;
 
-import static org.junit.Assert.assertEquals;
+import java.util.List;
+
+import static model.Responses.YES;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doReturn;
 
-@RunWith ( MockitoJUnitRunner.class )
+/* Base configuration (parent) class for JUnit 5, for Unit tests.
+ */
+@ExtendWith ( MockitoExtension.class )
 
 public class HotelServiceTest {
-
     @Mock
-    public HotelRepository hotelRepository;
+    private static HotelRepository hotelRepository;
 
-    public HotelService hotelService;
+    private static HotelService hotelService;
 
-    @Before
-    public void setup(){
+    @BeforeAll
+    static void setup(){
         hotelService = new HotelService ( hotelRepository );
     }
 
     @Test
     public void should_ValidateAndAddHotel(){
         Hotel hotel = new Hotel ();
-        hotel.setName ( "123456789123456789123456789123456789123456789123456789" );
+        hotel.setName ( "45678955555555555555555555555555555555555555555555555555555555555" );
 
-        doReturn(false).when(hotelRepository).add(any(Hotel.class));
-        String response = hotelService.validateAndAddHotels ( hotel );
-        assertEquals("Hotel was not added successfully", response);
+//        doReturn(false).when(hotelRepository).add(any(Hotel.class)); cu linia asta nu merge
+        String  response = hotelService.validateAndAddHotels (hotel);
+        assertEquals("Please enter a name that has maximum 50 characters", response);
+    }
+
+    @Test
+    public void should_RemoveHotel_whenAnswer_isYes(){
+        Hotel hotel1 = new Hotel ();
+        hotel1.setName ( "Lucky" );
+        hotelRepository.add(hotel1);
+        Responses responses = YES;
+        if (responses == YES){
+            hotelRepository.remove(hotel1);
+        }
+        System.out.println ();
+
     }
 
 

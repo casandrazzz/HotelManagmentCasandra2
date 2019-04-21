@@ -1,21 +1,21 @@
 package repository;
 
-//import model.Guest;
+import model.Guest;
 import model.Hotel;
-//import model.Room;
-//import model.Staff;
+import model.Room;
+import model.Staff;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HotelRepository implements IHotel{
 
-    private List<Hotel> hotels = new ArrayList<Hotel> ();
-   // private List<Room> rooms = new ArrayList<> ();
-    //private List<Staff> staff = new ArrayList<> ();
-    //private List<Guest> guests = new ArrayList<> ();
+    private List<Hotel> hotels = new ArrayList<> ();
+    private List<Room> rooms = new ArrayList<> ();
+    private List<Staff> staff = new ArrayList<> ();
+    private List<Guest> guests = new ArrayList<> ();
 
-   /* public List<Room> listRooms() {
+   public List<Room> listRooms() {
         return listRooms ();
 
     }
@@ -28,7 +28,7 @@ public class HotelRepository implements IHotel{
     public List<Guest> listGuests() {
         return listGuests ();
 
-    }*/
+    }
 
     @Override
     public boolean add(Hotel hotel) {

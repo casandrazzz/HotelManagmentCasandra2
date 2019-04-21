@@ -1,16 +1,17 @@
 package test;
 
-import org.junit.Before;
-import org.junit.Test;
-import model.Staff;
 
-import static org.junit.Assert.assertEquals;
+import model.Staff;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StaffTest {
 
     private Staff receptionist;
 
-    @Before
+    @BeforeAll
     public void setup() {
         Staff staff = new Staff ( "Rachel" );
 
@@ -21,7 +22,7 @@ public class StaffTest {
         Staff receptionist = new Staff ( "Rachel", 25, "B.H." );
 
 
-        assertEquals ( "Test", "Rachel", receptionist.getName () );
+        assertEquals (  "Rachel", receptionist.getName () );
 
     }
 
@@ -31,7 +32,7 @@ public class StaffTest {
         receptionist.setJobDescription ( "Welcomes guests" );
 
 
-        assertEquals ( "Test", "Welcomes guests", receptionist.getJobDescription () );
+        assertEquals ( "Welcomes guests", receptionist.getJobDescription () );
 
     }
 

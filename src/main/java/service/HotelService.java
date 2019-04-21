@@ -1,10 +1,11 @@
 package service;
 
+import java.util.List;
+
 import model.Hotel;
 import model.Responses;
 import repository.HotelRepository;
 
-import java.util.List;
 import java.util.Scanner;
 
 import static model.Responses.NO;
@@ -13,7 +14,7 @@ import static model.Responses.YES;
 
 public class HotelService {
 
-    Scanner s = new Scanner ( System.in );
+
     private HotelRepository hotelRepository;
 
     public HotelService(HotelRepository hotelRepository) {
@@ -26,7 +27,7 @@ public class HotelService {
 
 
         if (name == ("")) {
-            return "Please provide a name for the hotel. EMPTY STRING INPUT";
+            return "EMPTY";
         }
 
         if (name == null) {
@@ -43,7 +44,9 @@ public class HotelService {
         boolean responseFromRepo = hotelRepository.add ( hotel );
 
         if (responseFromRepo) {
+
             return "Hotel was added successfully. ";
+
         }
         return "Hotel was not added successfully";
     }
@@ -51,12 +54,16 @@ public class HotelService {
     public boolean delete(Hotel hotel) {
 
         System.out.println ( "Are you sure you want to delete this item? Respond with YES or NO" );
+        Scanner s = new Scanner ( System.in );
 
         String responsesStr = s.next ();
         Responses responses = Responses.valueOf ( responsesStr.toUpperCase () );
 
 
         if (responses == YES) {
+            hotelRepository.remove(hotel);
+
+
             System.out.println ( "Hotel removed successfuly" );
 
 
@@ -67,6 +74,10 @@ public class HotelService {
         }
 
         return true;
+    }
+
+    public List<Hotel> getHotels(){
+        return hotelRepository.listHotels ();
     }
 }
 
