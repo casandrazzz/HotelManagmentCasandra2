@@ -1,15 +1,14 @@
 package service;
 
-import java.util.List;
-
-import model.Hotel;
-import model.Responses;
+import model.commercial.Hotel;
+import model.enums.Responses;
 import repository.HotelRepository;
 
+import java.util.List;
 import java.util.Scanner;
 
-import static model.Responses.NO;
-import static model.Responses.YES;
+import static model.enums.Responses.NO;
+import static model.enums.Responses.YES;
 
 
 public class HotelService {
@@ -45,11 +44,11 @@ public class HotelService {
 
         if (responseFromRepo) {
 
-            return "Hotel was added successfully. ";
-
+            return "Hotel was added successfully";
         }
-        return "Hotel was not added successfully";
-    }
+           return "Hotel was not added successfully";
+        }
+
 
     public boolean delete(Hotel hotel) {
 

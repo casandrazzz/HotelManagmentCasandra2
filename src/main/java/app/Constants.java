@@ -1,12 +1,16 @@
 package app;
 
+import java.lang.reflect.Array;
+
 public class Constants {
 
-    public static final String WELCOME_MESSAGE = "Welcome! Enjoy your stay ;) ";
-    public static final String CALL_CENTER = "You can call our customer number 0-800-456 any time";
-    public final static int MINIMUM_AGE = 18;
-    public final static double MINIMUM_SALARY = 100;
-    public final static double MAXIMUM_CASINO_WIN = 2500;
+    protected static final String WELCOME_MESSAGE = "Welcome! Enjoy your stay ";
+    static final String CALL_CENTER = "You can call our customer number 0-800-456 any time";
+    public static final int MINIMUM_AGE = 18;
+    public static final Array [] CURRENCY = {};
+    public static final double MINIMUM_SALARY = 1000;
+    protected static final double MAXIMUM_CASINO_WIN = 25000;
+
 
 
 

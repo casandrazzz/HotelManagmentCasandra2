@@ -1,6 +1,6 @@
 package test;
 
-import model.Hotel;
+import model.commercial.Hotel;
 import repository.IHotel;
 
 import java.util.List;

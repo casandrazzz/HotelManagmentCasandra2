@@ -1,28 +1,37 @@
 package test;
 
 
-import model.Staff;
+import model.people.Staff;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@DisplayName("Test for Staff")
+@TestInstance ( TestInstance.Lifecycle.PER_CLASS )
 public class StaffTest {
+
 
     private Staff receptionist;
 
+    StaffTest(Staff receptionist) {
+        this.receptionist = receptionist;
+    }
+
     @BeforeAll
     public void setup() {
-        Staff staff = new Staff ( "Rachel" );
+        Staff receptionist = new Staff ( "Rachel" );
 
     }
 
     @Test
-    public void should_getReceptionistName() {
+    protected void should_getReceptionistName() {
         Staff receptionist = new Staff ( "Rachel", 25, "B.H." );
 
 
-        assertEquals (  "Rachel", receptionist.getName () );
+        assertEquals ( "Rachel", receptionist.getName () );
 
     }
 

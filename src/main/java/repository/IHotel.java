@@ -1,6 +1,6 @@
 package repository;
 
-import model.Hotel;
+import model.commercial.Hotel;
 
 import java.util.List;
 

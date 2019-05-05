@@ -1,6 +1,6 @@
 package test;
 
-import model.Hotel;
+import model.commercial.Hotel;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import repository.HotelRepository;
@@ -35,6 +35,8 @@ public class HotelRepositoryTest {
         hotel.setName ( null);
 
         boolean response = hotelRepository.add(null);
+
+        assertEquals(false, response);
 
 
 

@@ -2,37 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30339ffd-88c3-4efe-a473-9410641c6702" name="Default Changelist" comment="modified">
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/HotelRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/commercial/LanguageVersion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/people/InputValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/IGuest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/IRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/IStaff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/PersonRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/RoomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/StaffRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/GuestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/RoomService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/StaffService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Apartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/accomodation/Apartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Casino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/commercial/Casino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/DoubleRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/accomodation/DoubleRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Establishment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/commercial/Establishment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Gambler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/people/Gambler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Games.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/enums/Games.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/people/Guest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/commercial/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Penthouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/accomodation/Penthouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/people/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Responses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/enums/Responses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/accomodation/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/people/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/StandardRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/accomodation/StandardRoom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/HotelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/HotelRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/IHotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/IHotel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/HotelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/GamblerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/GamblerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/HotelRepositoryMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/HotelRepositoryMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/HotelRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/HotelRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/HotelServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/HotelServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/StaffTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/StaffTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Constants.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/MainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Apartment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Apartment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Casino$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Casino$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Casino.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Casino.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/DoubleRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/DoubleRoom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Establishment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Establishment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Gambler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Gambler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Games.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Games.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Guest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Guest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Hotel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Penthouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Penthouse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Responses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Responses.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Staff.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/StandardRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/StandardRoom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Apartment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Casino$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Casino.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/DoubleRoom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Establishment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Gambler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Games.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Guest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Hotel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Penthouse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Responses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Staff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/StandardRoom.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repository/HotelRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/HotelRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repository/IHotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/IHotel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/HotelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/HotelService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/test/GamblerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/GamblerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/test/HotelRepositoryMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/HotelRepositoryMock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/HotelRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/HotelRepositoryTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/test/HotelServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/HotelServiceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/test/StaffTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/StaffTest.class" afterDir="false" />
     </list>
@@ -43,6 +73,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/HotelManagmentCasandra2$MainClass.ic" NAME="MainClass Coverage Results" MODIFIED="1554563775248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -55,109 +88,136 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Staff.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repository/StaffRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="44" selection-end-column="34" />
+            <state relative-caret-position="237">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#284#285#0" expanded="true" />
+                <element signature="e#320#321#0" expanded="true" />
+                <element signature="e#363#364#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repository/HotelRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/people/Staff.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="1358">
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/RoomService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-76">
+              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#389#390#0" expanded="true" />
+                <element signature="e#441#442#0" expanded="true" />
+                <element signature="e#3632#3633#0" expanded="true" />
+                <element signature="e#3659#3660#0" expanded="true" />
+                <element signature="e#3894#3895#0" expanded="true" />
+                <element signature="e#3921#3922#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repository/GuestRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#172#173#0" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
+                <element signature="e#253#254#0" expanded="true" />
+                <element signature="e#281#282#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repository/PersonRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#205#206#0" expanded="true" />
+                <element signature="e#232#233#0" expanded="true" />
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#314#315#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#454#455#0" expanded="true" />
+                <element signature="e#507#508#0" expanded="true" />
+                <element signature="e#535#536#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/GuestService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/StaffService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="112" column="9" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/people/InputValidation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="44" column="81" selection-start-line="44" selection-start-column="81" selection-end-line="44" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/accomodation/Room.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test/HotelServiceTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+            <state relative-caret-position="65">
+              <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/HotelService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-125">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#394#395#0" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#1624#1625#0" expanded="true" />
-                <element signature="e#1661#1662#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test/HotelRepositoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#389#390#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test/GamblerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test/StaffTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test/HotelRepositoryMock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#189#190#0" expanded="true" />
-                <element signature="e#217#218#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.10.0/mockito-core-2.10.0.jar!/org/mockito/internal/runners/DefaultInternalRunner.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
@@ -167,9 +227,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Enum" />
         <option value="AnnotationType" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -180,51 +240,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/model/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Guest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/MainClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MainClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/VIP.java" />
-        <option value="$PROJECT_DIR$/src/main/java/HotelApp/MainClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Establishment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/CasinoRoom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/EnumGames.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Games.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Room.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/StandardRoom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Apartment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/DoubleRoom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Penthouse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/room/Apartment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/room/Penthouse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/room/DoubleRoom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/room/Room.java" />
-        <option value="$PROJECT_DIR$/src/main/java/person/Guest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/person/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/java/person/Gambler.java" />
-        <option value="$PROJECT_DIR$/src/test/java/StaffTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/GamblerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Casino.java" />
-        <option value="$PROJECT_DIR$/src/main/java/person/Staff.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/hotel/Room.java" />
         <option value="$PROJECT_DIR$/src/main/java/room/StandardRoom.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/hotel/Gambler.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Staff.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/IHotel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Responses.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/MainClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Hotel.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/HotelRepositoryMock.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/ExtendWith.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/model/commercialPeople/Guest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/commercialPeople/Gambler.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/GamblerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/test/StaffTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/repository/HotelRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/HotelService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/commercialPeople/Person.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/HotelRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/HotelService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/test/TestInstance.java" />
+        <option value="$PROJECT_DIR$/src/test/java/test/StaffTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/HotelServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/commercialModules/Penthouse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/commercialModules/Apartment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/commercialEstablishment/Establishment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/commercialEstablishment/Casino.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/commercialEstablishment/LanguageVersion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/commercialEstablishment/Hotel.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/app/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/people/Gambler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/commercial/LanguageVersion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/commercial/Casino.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/accomodation/RoomInput.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/people/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/accomodation/StandardRoom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/accomodation/DoubleRoom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/accomodation/Penthouse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/accomodation/Apartment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/HotelRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/IRoom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/accomodation/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/commercial/Hotel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/IStaff.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/IGuest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/GuestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/GuestRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/PersonRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/RoomRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/StaffRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/RoomService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/people/Staff.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/people/InputValidation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/StaffService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/MainClass.java" />
       </list>
     </option>
   </component>
@@ -246,9 +312,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="673" />
+    <option name="width" value="700" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -309,7 +375,35 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="accomodation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HotelManagmentCasandra2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HotelManagmentCasandra2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="commercial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HotelManagmentCasandra2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HotelManagmentCasandra2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HotelManagmentCasandra2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HotelManagmentCasandra2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="people" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HotelManagmentCasandra2" type="b2602c69:ProjectViewProjectNode" />
@@ -318,6 +412,13 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HotelManagmentCasandra2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HotelManagmentCasandra2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HotelManagmentCasandra2" type="b2602c69:ProjectViewProjectNode" />
@@ -353,6 +454,11 @@
             </path>
             <path>
               <item name="HotelManagmentCasandra2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HotelManagmentCasandra2" type="462c0819:PsiDirectoryNode" />
+              <item name="Users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HotelManagmentCasandra2" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -365,7 +471,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555858940532" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557081403181" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Session6" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -393,7 +499,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HotelServiceTest">
+  <component name="RunManager" selected="Application.MainClass">
     <configuration name="MainClass" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.MainClass" />
       <module name="HotelManagmentCasandra2" />
@@ -473,11 +579,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StaffTest" />
         <item itemvalue="JUnit.HotelServiceTest" />
         <item itemvalue="JUnit.HotelRepositoryTest" />
-        <item itemvalue="JUnit.StaffTest" />
-        <item itemvalue="JUnit.HotelServiceTest.should_ValidateAndAddHotel" />
         <item itemvalue="JUnit.GamblerTest" />
+        <item itemvalue="JUnit.HotelServiceTest.should_ValidateAndAddHotel" />
       </list>
     </recent_temporary>
   </component>
@@ -517,35 +623,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HotelServiceTest - 2019.04.21 at 16h 43m 24s.xml">
+    <history-entry file="HotelServiceTest - 2019.04.28 at 20h 11m 27s.xml">
       <configuration name="HotelServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HotelRepositoryTest - 2019.04.21 at 17h 39m 10s.xml">
-      <configuration name="HotelRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HotelRepositoryTest - 2019.04.21 at 17h 40m 59s.xml">
-      <configuration name="HotelRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HotelRepositoryTest - 2019.04.21 at 17h 42m 19s.xml">
-      <configuration name="HotelRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HotelServiceTest - 2019.04.21 at 17h 43m 18s.xml">
+    <history-entry file="HotelServiceTest - 2019.04.28 at 20h 12m 41s.xml">
       <configuration name="HotelServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HotelServiceTest - 2019.04.21 at 17h 43m 57s.xml">
+    <history-entry file="HotelServiceTest - 2019.04.28 at 20h 13m 51s.xml">
       <configuration name="HotelServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HotelServiceTest - 2019.04.21 at 17h 47m 39s.xml">
+    <history-entry file="HotelServiceTest - 2019.04.28 at 20h 15m 17s.xml">
       <configuration name="HotelServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HotelServiceTest - 2019.04.21 at 17h 47m 58s.xml">
+    <history-entry file="HotelServiceTest - 2019.04.28 at 20h 16m 09s.xml">
       <configuration name="HotelServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HotelServiceTest - 2019.04.21 at 17h 48m 57s.xml">
+    <history-entry file="HotelServiceTest - 2019.04.28 at 20h 18m 05s.xml">
       <configuration name="HotelServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HotelServiceTest - 2019.04.21 at 17h 50m 04s.xml">
+    <history-entry file="HotelServiceTest - 2019.04.28 at 20h 18m 37s.xml">
       <configuration name="HotelServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StaffTest - 2019.04.28 at 20h 20m 21s.xml">
+      <configuration name="StaffTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StaffTest - 2019.04.28 at 20h 44m 17s.xml">
+      <configuration name="StaffTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StaffTest - 2019.04.29 at 07h 46m 22s.xml">
+      <configuration name="StaffTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -558,22 +664,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="0" width="697" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.68945867" weight="0.09262166" />
-      <window_info id="Structure" order="1" sideWeight="0.3105413" side_tool="true" weight="0.6569678" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6863271" weight="0.08774584" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Structure" order="5" sideWeight="0.31367293" side_tool="true" weight="0.1265625" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32252252" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3180272" />
       <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.32972974" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.054054055" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4992343" visible="true" weight="0.32792792" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.3981982" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.052721087" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4992343" visible="true" weight="0.30952382" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.3963964" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="SonarLint" order="8" weight="0.32792792" />
@@ -589,22 +695,22 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
       <window_info anchor="right" id="Maven" order="7" weight="0.67993873" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.24655436" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.11875945" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.68945867" visible="true" weight="0.09262166" />
-      <window_info id="Structure" order="1" sideWeight="0.3105413" side_tool="true" weight="0.6569678" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6863271" visible="true" weight="0.08774584" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Structure" order="5" sideWeight="0.31367293" side_tool="true" weight="0.1265625" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32482994" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3189189" />
       <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.32972974" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.054054055" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4992343" visible="true" weight="0.32792792" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.3981982" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.052721087" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4992343" visible="true" weight="0.30952382" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.3963964" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="SonarLint" order="8" weight="0.32792792" />
@@ -620,7 +726,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
       <window_info anchor="right" id="Maven" order="7" weight="0.67993873" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.24655436" />
+      <window_info anchor="right" id="Ant Build" order="8" visible="true" weight="0.11875945" />
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
@@ -633,9 +739,27 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/test/HotelServiceTest.java</url>
-          <line>41</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/test/GamblerTest.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/model/people/Staff.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/model/people/Staff.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -645,183 +769,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/VIP.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_intro.zip/intro/src/main/java/ro/sci/intro/FlowControlExample.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_ObjectContainers.zip/src/com/siit/containers/Student.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_ObjectContainers.zip/src/com/siit/containers/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="214" selection-start-line="214" selection-end-line="214" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_ObjectContainers.zip/src/com/siit/containers/Unemployed.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_ObjectContainers.zip/src/com/siit/containers/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_ObjectContainers.zip/src/com/siit/containers/Employee.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/CasinoRoom.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/EnumGames.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/DoubleRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Penthouse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Guest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-680">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="209" column="10" selection-start-line="209" selection-start-column="10" selection-end-line="209" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.10.0/mockito-core-2.10.0.jar!/org/mockito/internal/runners/RunnerFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#2909#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/junit4.jar/junit4.jar!/org/junit/internal/requests/ClassRequest.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.5/junit-4.5.jar!/org/junit/internal/requests/ClassRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="244" column="18" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
-          <folding>
-            <element signature="e#10225#10226#0" expanded="true" />
-            <element signature="e#10308#10309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.7.4/byte-buddy-1.7.4.jar!/net/bytebuddy/TypeCache.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
           <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/IHotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Establishment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Casino.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Apartment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Gambler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Games.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Hotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Responses.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -840,20 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/StandardRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Staff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="44" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -885,23 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/GamblerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/StaffTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.1.1/junit-jupiter-api-5.1.1.jar!/org/junit/jupiter/api/Test.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -909,45 +829,397 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/HotelService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/people/Guest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/enums/Games.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/enums/Responses.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/GamblerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#1624#1625#0" expanded="true" />
-            <element signature="e#1661#1662#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/HotelRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        <state relative-caret-position="156">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/HotelRepository.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.1.1/junit-jupiter-api-5.1.1.jar!/org/junit/jupiter/api/TestInstance.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="30" />
+        <state>
+          <caret selection-end-line="34" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/TestInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/StaffTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/HotelServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        <state relative-caret-position="140">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/commercial/Establishment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="218" selection-start-line="218" selection-end-line="218" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/commercial/LanguageVersion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/people/Gambler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/enums/RoomInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/people/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/accomodation/Penthouse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/accomodation/StandardRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/accomodation/DoubleRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/accomodation/Apartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/IHotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/function/IntConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/commercial/Casino.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="769" selection-start-line="769" selection-end-line="769" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/commercial/Hotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/IRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/IStaff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/HotelRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="47" column="45" selection-start-line="46" selection-start-column="8" selection-end-line="47" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/IGuest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/HotelService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-222">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/RoomRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/GuestRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/PersonRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#232#233#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#507#508#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/StaffRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/GuestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/RoomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#3632#3633#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
+            <element signature="e#3894#3895#0" expanded="true" />
+            <element signature="e#3921#3922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/accomodation/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/people/Staff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1358">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/people/InputValidation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="44" column="81" selection-start-line="44" selection-start-column="81" selection-end-line="44" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/StaffService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="112" column="9" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
