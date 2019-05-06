@@ -1,0 +1,3 @@
+
+jsquid:S1450"TRemove the "rooms" field and declare it as a local variable in the relevant methods.(ํูก3
+?squid:S1068")Remove this unused "rooms" private field.(ํูก3

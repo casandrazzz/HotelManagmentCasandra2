@@ -1,4 +1,4 @@
-package test;
+package test.serviceTest;
 
 
 import model.people.Staff;
@@ -6,37 +6,33 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+import org.mockito.Mock;
+import repository.StaffRepository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Test for Staff")
 @TestInstance ( TestInstance.Lifecycle.PER_CLASS )
-public class StaffTest {
+public class StaffServiceTest {
+    @Mock
+    private static StaffRepository staffRepository;
 
-
-    private Staff receptionist;
-
-    StaffTest(Staff receptionist) {
-        this.receptionist = receptionist;
-    }
-
-    @BeforeAll
-    public void setup() {
-        Staff receptionist = new Staff ( "Rachel" );
+     @BeforeAll
+     void setup() {
+         new Staff ( "Rachel" );
 
     }
 
     @Test
-    protected void should_getReceptionistName() {
+    void should_getReceptionistName() {
         Staff receptionist = new Staff ( "Rachel", 25, "B.H." );
-
 
         assertEquals ( "Rachel", receptionist.getName () );
 
     }
 
     @Test
-    public void should_getReceptionistJobDescription() {
+    void should_getReceptionistJobDescription() {
         Staff receptionist = new Staff ( "Rachel", 25, "B.H." );
         receptionist.setJobDescription ( "Welcomes guests" );
 

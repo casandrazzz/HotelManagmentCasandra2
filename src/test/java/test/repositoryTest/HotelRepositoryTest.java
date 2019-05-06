@@ -1,4 +1,4 @@
-package test;
+package test.repositoryTest;
 
 import model.commercial.Hotel;
 import org.junit.jupiter.api.BeforeAll;

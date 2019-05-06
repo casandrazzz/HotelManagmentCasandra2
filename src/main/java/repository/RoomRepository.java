@@ -10,6 +10,7 @@ import java.util.List;
 
 public class RoomRepository implements IRoom {
 
+
     private Logger logger = Logger.getLogger ( "Room Repository" );
 
     private List<Room> rooms = new ArrayList<> ();
@@ -20,7 +21,7 @@ public class RoomRepository implements IRoom {
     }
 
     @Override
-    public boolean add(Room room) {
+    public  boolean add(Room room) {
         if (room !=null){
             logger.log ( Level.DEBUG,"Room added successfully");
             return true;
