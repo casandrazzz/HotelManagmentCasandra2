@@ -1,8 +1,8 @@
 package repository;
 
 import model.commercial.Hotel;
-import model.people.Guest;
-import model.people.Staff;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,32 +10,18 @@ import java.util.List;
 public class HotelRepository implements IHotel{
 
     private List<Hotel> hotels = new ArrayList<> ();
-
-    private List<Staff> staff = new ArrayList<> ();
-    private List<Guest> guests = new ArrayList<> ();
-
-
-
-    public List<Staff> listStaff() {
-        return listStaff ();
-
-    }
-
-    public List<Guest> listGuests() {
-        return listGuests ();
-
-    }
+    private Logger logger = Logger.getLogger ( "Hotel Repository " );
 
     @Override
     public boolean add(Hotel hotel) {
        if (hotel !=null){
 
         hotels.add(hotel);
-           System.out.println ("Hotel added successfully");
+           logger.log ( Level.INFO,"Hotel added successfully");
         return true;
           }
        else{
-           System.out.println ("Failed to add hotel");
+           logger.log (Level.INFO,"Failed to add hotel");
           return false;
        }
    }
@@ -45,7 +31,7 @@ public class HotelRepository implements IHotel{
     public void remove(Hotel hotel) {
 
         hotels.remove ( hotel );
-        System.out.println ("Hotel removed");
+        logger.log (Level.INFO, "Hotel removed" );
 
     }
 

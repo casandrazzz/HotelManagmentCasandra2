@@ -1,6 +1,11 @@
 package app;
 
+import lombok.Getter;
+
 import java.lang.reflect.Array;
+
+@Getter
+
 
 public class Constants {
 

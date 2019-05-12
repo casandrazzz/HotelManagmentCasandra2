@@ -8,8 +8,10 @@ public interface IGuest {
     List<Guest> listGuest();
 
 
-    boolean add (Guest guests);
+    boolean add(Guest guests);
 
-    void remove (Guest guests);
+    void remove(Guest guests);
+
+
 
 }

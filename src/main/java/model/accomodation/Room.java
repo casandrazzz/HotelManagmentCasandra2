@@ -14,9 +14,10 @@ import org.apache.log4j.Logger;
 
 public class Room {
 
-    private static Logger logger = Logger.getLogger(Room.class);
+    private static Logger logger = Logger.getLogger ( Room.class );
 
     private int number;
+    public final int MAXIMUM_NUMBER_OF_ROOMS = 100;
 
     public static int price;
 
@@ -25,7 +26,6 @@ public class Room {
     private boolean occupied;
 
     private boolean cleaned;
-
 
 
     public String getType() {
@@ -80,18 +80,7 @@ public class Room {
     }
 
 
- //   public int displayApartmentPrice() {
-  //      int[] prices = {100, 200, 300};
-    //    int largest = prices[0];
-      //  for (int i = 0; i < prices.length; i++) {
-        //    if (prices[i] > largest) {
-          //      largest = prices[i];
-//
-  //          }
-    //    }
-
-      //  return largest;
-    }
+ }
 
 
 

@@ -3,29 +3,38 @@ package app;
 import model.accomodation.Apartment;
 import model.accomodation.DoubleRoom;
 import model.accomodation.Penthouse;
+import model.accomodation.Room;
 import model.commercial.Casino;
 import model.commercial.Hotel;
 import model.enums.Games;
 import model.people.Gambler;
 import model.people.Guest;
-import model.people.InputValidation;
 import model.people.Staff;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import repository.HotelRepository;
+import service.GuestService;
 import service.HotelService;
+import service.RoomService;
 import service.StaffService;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.IntStream;
+
+import static model.accomodation.DoubleRoom.calculateCost;
+import static service.RoomService.rooms;
 
 
+@SuppressWarnings("ResultOfMethodCallIgnored")
 public class MainClass {
     private static Logger logger = Logger.getLogger ( "Main" );
 
-    public static void main(String[] args) throws IOException, InputValidation {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
 
         logger.info ( "INFO" );
 
@@ -47,7 +56,7 @@ public class MainClass {
         Staff hostess = new Staff ( "Jane", 28, "East" );
         Staff valet = new Staff ( "Richard", 40, "North" );
         Staff maid = new Staff ( "Chris", 35, "West" );
-        Staff accountant = new Staff ( "Fineas" );
+        Staff accountant = new Staff ( "Fineas", 25, "Madrid" );
         accountant.setJobDescription ( "Prepare balance sheets, profit and loss statements and other finacial reports" );
         receptionist.setJobDescription ( "Receive visitors at the front desk by greeting, welcoming, directing and announcing them appropiately" );
         hostess.setJobDescription ( "Present a positive first impression of the establishment's friendliness, excellent service and high standards" );
@@ -60,21 +69,24 @@ public class MainClass {
         staff.add ( accountant );
         logger.log ( Level.INFO, "Total number of staff is " + staff.size () + "." );
         logger.log ( Level.INFO, "Meet " + staff.toString () + "." );
-        StaffService.interactions();
+        StaffService.interactions ();
         StaffService.presentOffer ();
 
 
         Guest guest1;
+
+
         guest1 = new Guest ( "James", 25, "Kansas" );
         guest1.setPreference ( "DOUBLE" );
         guest1.interactions ();
         guest1.setCheckInDate ( new Date () );
-        guest1.setNightsOfStay ( 5 );
+        guest1.setReasonForStay ( "Business" );
         guests.add ( guest1 );
 
-        DoubleRoom doubleRoom = new DoubleRoom ();
-        doubleRoom.calculateCost ();
-        logger.log ( Level.INFO, doubleRoom.calculateCost () );
+
+        new DoubleRoom ();
+        calculateCost ();
+        logger.log ( Level.INFO, calculateCost () );
 
         Guest guest2;
         guest2 = new Guest ( "Gina", 25, "Colorado" );
@@ -87,102 +99,46 @@ public class MainClass {
         Apartment penthouse = new Penthouse ();
         Apartment.calculateCost ();
         logger.log ( Level.INFO, penthouse.getPrice () );
-        logger.log ( Level.INFO, penthouse.calculateCost () );
+        logger.log ( Level.INFO, Apartment.calculateCost () );
 
         for (int i = 0; i < guests.size (); i++) {
             logger.log ( Level.INFO, guests.get ( i ).toString () + "." );
         }
 
 
-
-
-
-        /*try
-        {
-            SimpleDateFormat sdf = new SimpleDateFormat ( "yyyy-MM-dd" );
-            Date checkIn = sdf.parse ( "2019-05-02" );
-            Date checkOut = sdf.parse ( "2019-05-23" );
-            guest1.setCheckInDate ( checkIn );
-            guest1.setCheckOutDate ( checkOut );
-            System.out.println ("This is my check in date " + checkIn);
-            System.out.println ("This is my check out date " + checkOut);
-
-        } catch (ParseException e) {
-            e.printStackTrace ();*/
-
-
         logger.log ( Level.INFO, "I am " + guest1.getName () + "." + " I am from " + guest1.getAddress () + " I'd like a " + guest1.getPreference () + " room" );
 
-
-
-       /* {
-            int i = 1;
-            while (i < 33) {
-                Room room1 = new Room ();
-                room1.setNumber ( i );
-                room1.setType ( "SINGLE" );
-                room1.setPrice ( 100 );
-                rooms.add ( room1 );
-                logger.log (Level.INFO, "Room number " + room1.getNumber () + " is a  " + room1.getType () + " and it costs " + room1.getPrice () );
-
-                i++;
-            }
-        }
-
-        for (int i = 1; i < 15; i++) {
+        IntStream.range ( 1, 33 ).forEach ( n -> {
             Room room1 = new Room ();
-            room1.setNumber ( i );
-            room1.setOccupied ( true );
+            room1.setNumber ( n );
+            room1.setType ( "SINGLE" );
+            room1.setPrice ( 100 );
             rooms.add ( room1 );
-            logger.log (Level.INFO, "Single room number " + room1.getNumber () + " is occupied " + " (" + room1.isOccupied () + " ) " );
-        }
+            logger.log ( Level.INFO, room1.getNumber () + " is a  " + room1.getType () + " , Price: " + room1.getPrice () );
 
-        for (int i = 15; i < 33; i++) {
-
-            Room room1 = new Room ();
-            room1.setNumber ( i );
-            room1.setCleaned ( true );
-            logger.log (Level.INFO, "Single room " + room1.getNumber () + " is not occupied and cleaned " + "(" + room1.isCleaned () + ")" );
-
-        }
-
-        for (int i = 34; i < 66; i++) {
+        } );
+        IntStream.range ( 34, 66 ).forEach ( n -> {
             Room room2 = new Room ();
-            room2.setNumber ( i );
+            room2.setNumber ( n );
             room2.setType ( "DOUBLE" );
-            room2.setOccupied ( false );
-            room2.setCleaned ( true );
             rooms.add ( room2 );
-            logger.log (Level.INFO, "Room number " + room2.getNumber () + " is " + room2.getType () + " room " + " and it is not occupied." + "(" + room2.isOccupied () + ")" );
-        }
+            logger.log ( Level.INFO, room2.getNumber () + " is " + room2.getType () + ", Price: " + room2.getPrice () );
 
-        for (int i = 67; i < 100; i++) {
+        } );
+
+        IntStream.range ( 67, 100 ).forEach ( n -> {
             Room room3 = new Room ();
-            room3.setNumber ( i );
+            room3.setNumber ( n );
             room3.setType ( "APARTMENT" );
-            room3.displayApartmentPrice ();
+            RoomService.displayApartmentPrice ();
             rooms.add ( room3 );
-            logger.log (Level.INFO, "Room number " + room3.getNumber () + " is " + room3.getType () + " and it costs " + room3.displayApartmentPrice () + "$" );
-        }
+            logger.log ( Level.INFO, room3.getNumber () + " is " + room3.getType () + " , Price: " + RoomService.displayApartmentPrice () + "$" );
 
-        for (int i = 67; i < 77; i++) {
-            Room room3 = new Room ();
-            room3.setNumber ( i );
-            room3.setOccupied ( true );
-            rooms.add ( room3 );
-            logger.log (Level.INFO, "Room number " + room3.getNumber () + " is occupied " + "(" + room3.isOccupied () + ")" );
-        }
+        } );
 
-        for (int i = 77; i <= 100; i++) {
-
-            Room room3 = new Room ();
-            room3.setNumber ( i );
-            room3.setCleaned ( true );
-            logger.log (Level.INFO, "Room number " + room3.getNumber () + " is cleaned " + "(" + room3.isCleaned () + ")" );
-
-        }*/
-
-        //   receptionist.askGuest ();
+        RoomService.manageStatus ();
+        rooms.toString ();
+        rooms.listRooms ();
 
 
         Casino casino = new Casino ( Games.SLOT_MACHINE );
@@ -207,23 +163,28 @@ public class MainClass {
         hotel2.setName ( "a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9" );
         logger.log ( Level.INFO, hotel1.getName () + hotelService.validateAndAddHotels ( hotel1 ) );
         logger.log ( Level.INFO, hotel2.getName () + hotelService.validateAndAddHotels ( hotel2 ) );
-        //hotelService.delete ( hotel2 );
         logger.log ( Level.INFO, hotel2.getName () + hotelService.delete ( hotel2 ) );
+        guests.size ();
+
+        GuestService.readLoyaltyStatus ();
+        GuestService.readRules ();
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat ( "yyyy-MM-dd" );
+            Date checkIn = sdf.parse ( "2019-05-02" );
+            Date checkOut = sdf.parse ( "2019-05-23" );
+            guest1.setCheckInDate ( checkIn );
+            guest1.setCheckOutDate ( checkOut );
+            logger.log ( Level.INFO, "This is my check in date " + checkIn );
+            logger.log ( Level.INFO, "This is my check out date " + checkOut );
+        } catch (ParseException e) {
+            logger.log ( Level.ERROR, e );
 
 
-
-
-
-            /*for (i = 0; i<prices.length; i++ ) {
-                int smallest = prices [0];
-                if (prices[i] < smallest) {
-                    smallest = prices[i];
-                    System.out.println ("Single room price is " + smallest );*/
-
+        }
 
     }
-
 }
+
 
 
 

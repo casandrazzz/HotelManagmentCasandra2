@@ -6,7 +6,7 @@ import model.people.Staff;
 import java.util.Collections;
 import java.util.List;
 
-public class PersonRepository implements IGuest,IStaff{
+public class PersonRepository implements IGuest, IStaff {
     @Override
     public List<Guest> listGuest() {
         return Collections.emptyList ();
@@ -21,6 +21,7 @@ public class PersonRepository implements IGuest,IStaff{
     public void remove(Guest guests) {
 
     }
+
 
     @Override
     public List<Staff> listStaff() {

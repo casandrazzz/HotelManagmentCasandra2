@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface IHotel {
 
-    boolean add (Hotel hotel);
+    boolean add(Hotel hotel);
 
-    void remove (Hotel hotel);
+    void remove(Hotel hotel);
 
-    List<Hotel> listHotels ();
+    List<Hotel> listHotels();
 }

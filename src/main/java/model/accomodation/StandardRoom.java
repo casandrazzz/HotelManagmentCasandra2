@@ -1,6 +1,10 @@
 package model.accomodation;
 
+import lombok.Getter;
+import lombok.Setter;
 import model.people.Guest;
+@Getter
+@Setter
 
 public class StandardRoom extends Room {
 

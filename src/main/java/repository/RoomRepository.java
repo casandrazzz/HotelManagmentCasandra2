@@ -21,7 +21,7 @@ public class RoomRepository implements IRoom {
     }
 
     @Override
-    public  boolean add(Room room) {
+    public boolean add(Room room) {
         if (room !=null){
             logger.log ( Level.DEBUG,"Room added successfully");
             return true;
@@ -45,4 +45,6 @@ public class RoomRepository implements IRoom {
     public void setRooms(List<Room> rooms) {
         this.rooms = rooms;
     }
+
+
 }

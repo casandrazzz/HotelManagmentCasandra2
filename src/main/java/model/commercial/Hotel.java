@@ -1,45 +1,34 @@
 package model.commercial;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+
 /**
  * Hotel has a list of rooms and a list of staff, name and address;
  */
 
+@Getter
+@Setter
+@NoArgsConstructor
+
 public class Hotel implements Establishment, LanguageVersion {
     private String name;
     private String address;
-    private int MINIMUM_ROOMS=5;
+    private int MINIMUM_ROOMS = 5;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName (String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    /*@Override
-    public String toString() {
-        return "Hotel{" +
-                "rooms=" + HotelRepository.rooms +
-                ", staff=" + HotelRepository.staff +
-                ", guests" + HotelRepository.guests;
-    }*/
+    private Logger logger = Logger.getLogger ( "Establishment" );
 
 
     @Override
     public void defineEstablishmentType() {
 
+
         String establishmentType = "Hotel";
 
-        System.out.println (establishmentType);
+        logger.log ( Level.INFO, establishmentType);
 
     }
 
@@ -48,7 +37,7 @@ public class Hotel implements Establishment, LanguageVersion {
 
         String establishmentLocation = "Urban";
 
-        System.out.println (establishmentLocation);
+        logger.log (Level.INFO, establishmentLocation );
 
     }
 
@@ -57,9 +46,11 @@ public class Hotel implements Establishment, LanguageVersion {
 
         String establishmentWorkingHours = "Nonstop";
 
-        System.out.println (establishmentWorkingHours);
+        logger.log (Level.INFO, establishmentWorkingHours );
 
     }
+
+
 }
 
 

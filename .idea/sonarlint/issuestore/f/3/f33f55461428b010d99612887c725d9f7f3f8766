@@ -1,3 +1,10 @@
 
-Fsquid:S1068"*Remove this unused "logger" private field.(ÔÄ¼‹şÿÿÿÿ
-Osquid:S1068	"3Remove this unused "guestRepository" private field.(İ½Æşÿÿÿÿ
+ssquid:S2095="PUse try-with-resources or close this "ObjectOutputStream" in a "finally" clause.(•ÀîØÿÿÿÿÿ8öß­ª-
+Jsquid:S14816",Remove this unused "content" local variable.(‡¹²¡8öß­ª-
+Osquid:S1068"3Remove this unused "guestRepository" private field.(İ½Æşÿÿÿÿ
+Msquid:S2093,"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8öß­ª-
+osquid:S00117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞÒ‚k8öß­ª-
+psquid:S00117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—éÓ‚8öß­ª-
+msquid:S2095B"OUse try-with-resources or close this "ObjectInputStream" in a "finally" clause.(Åˆ¶8öß­ª-
+Fsquid:S1148""#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¥óÒÃ©-
+¸%squid:RedundantThrowsDeclarationCheck"{Remove the declaration of thrown exception 'java.io.FileNotFoundException', as it cannot be thrown from constructor's body.(¡ÂëĞıÿÿÿÿ8öß­ª-

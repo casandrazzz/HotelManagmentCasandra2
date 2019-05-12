@@ -7,8 +7,7 @@ public class Apartment extends Room {
 
 
     public static double calculateCost() {
-      return Apartment.price * nightsOfStay;
-
+        return Apartment.price * nightsOfStay;
 
 
     }

@@ -1,6 +1,11 @@
 package model.accomodation;
 
+import lombok.Getter;
+import lombok.Setter;
 import model.people.Guest;
+
+@Getter
+@Setter
 
 public class Penthouse extends Apartment {
     public static double price = 1000;
@@ -16,7 +21,7 @@ public class Penthouse extends Apartment {
         this.price = price;
     }
 
-
+    @Deprecated
     public static double calculateCost() {
         return Penthouse.price * Guest.nightsOfStay;
 

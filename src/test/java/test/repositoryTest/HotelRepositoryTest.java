@@ -5,44 +5,54 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import repository.HotelRepository;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-public class HotelRepositoryTest {
+class HotelRepositoryTest {
 
     private static HotelRepository hotelRepository;
 
     @BeforeAll
-    public static void  setup() {
+    static void setup() {
         hotelRepository = new HotelRepository ();
     }
 
     @Test
-    public void should_AddHotel_ForValidData() {
+    void should_AddHotel_ForValidData() {
 
         Hotel hotel = new Hotel ();
         hotel.setName ( "Golden Tulip" );
-        hotel.setAddress ( "Frunzisului 106" );
+        hotel.setAddress ( "Frunzisului 104" );
 
         boolean response = hotelRepository.add ( hotel );
 
-        assertEquals ( true, response  );
+        assertTrue ( response );
     }
 
     @Test
-    public void shouldNot_AddHotel_ForInvalidData() {
+    void shouldNot_AddHotel_ForInvalidData() {
 
         Hotel hotel = new Hotel ();
-        hotel.setName ( null);
+        hotel.setName ( null );
 
-        boolean response = hotelRepository.add(null);
+        boolean response = hotelRepository.add ( null );
 
-        assertEquals(false, response);
-
-
+        assertFalse ( response );
 
 
     }
 
 
+    @Test
+    void should_remove_hotel() {
+        List<Hotel> hotel = new ArrayList<> ();
+        Hotel hotel1 = new Hotel ();
+        hotel1.setName ( "Art" );
+        hotelRepository.add ( hotel1 );
+        hotelRepository.remove ( hotel1 );
+        assertEquals ( hotel.size (), 0 );
+    }
 }
 

@@ -1,5 +1,6 @@
 package service;
 
+import lombok.ToString;
 import model.accomodation.*;
 import model.people.InputValidation;
 import org.apache.log4j.Logger;
@@ -9,6 +10,7 @@ import java.util.Scanner;
 
 import static model.people.Guest.nightsOfStay;
 import static org.apache.log4j.Level.INFO;
+@ToString(callSuper = true)
 
 public class StaffService {
 

@@ -5,7 +5,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import repository.RoomRepository;
 
-import java.util.stream.IntStream;
+import java.util.Objects;
 
 import static repository.RoomRepository.getRooms;
 
@@ -32,23 +32,11 @@ public class RoomService {
         return largest;
     }
 
-    private static final RoomRepository rooms = new RoomRepository ();
+    public static final RoomRepository rooms = new RoomRepository ();
 
     public static void manageStatus() {
-        int i = 1;
-        while (i < 33) {
-            Room room1 = new Room ();
-            room1.setNumber ( i );
-            room1.setType ( "SINGLE" );
-            room1.setPrice ( 100 );
-            rooms.add ( room1 );
-            logger.log ( Level.INFO, "Room number " + room1.getNumber () + " is a  " + room1.getType () + " and it costs " + room1.getPrice () );
 
-            i++;
-        }
-
-
-        for (i = 1; i < 15; i++) {
+        for (int i = 1; i < 15; i++) {
             Room room1 = new Room ();
             room1.setNumber ( i );
             room1.setOccupied ( true );
@@ -56,41 +44,16 @@ public class RoomService {
             logger.log ( Level.INFO, "Single room number " + room1.getNumber () + " is occupied " + " (" + room1.isOccupied () + " ) " );
         }
 
-        IntStream.range ( 15, 33 ).forEach ( n -> {
+        for (int i = 15; i < 33; i++) {
+
             Room room1 = new Room ();
-            room1.setNumber ( n );
+            room1.setNumber ( i );
             room1.setCleaned ( true );
             logger.log ( Level.INFO, "Single room " + room1.getNumber () + " is not occupied and cleaned " + "(" + room1.isCleaned () + ")" );
-        } );
 
-        for (i = 34; i < 66; i++) {
-            Room room2 = new Room ();
-            room2.setNumber ( i );
-            room2.setType ( "DOUBLE" );
-            room2.setOccupied ( false );
-            room2.setCleaned ( true );
-            rooms.add ( room2 );
-            logger.log ( Level.INFO, "Room number " + room2.getNumber () + " is " + room2.getType () + " room " + " and it is not occupied." + "(" + room2.isOccupied () + ")" );
         }
 
-        for (i = 67; i < 100; i++) {
-            Room room3 = new Room ();
-            room3.setNumber ( i );
-            room3.setType ( "APARTMENT" );
-            RoomService.displayApartmentPrice ();
-            rooms.add ( room3 );
-            logger.log ( Level.INFO, "Room number " + room3.getNumber () + " is " + room3.getType () + " and it costs " + RoomService.displayApartmentPrice () + "$" );
-        }
-
-        for (i = 67; i < 77; i++) {
-            Room room3 = new Room ();
-            room3.setNumber ( i );
-            room3.setOccupied ( true );
-            rooms.add ( room3 );
-            logger.log ( Level.INFO, "Room number " + room3.getNumber () + " is occupied " + "(" + room3.isOccupied () + ")" );
-        }
-
-        for (i = 77; i <= 100; i++) {
+        for (int i = 77; i <= 100; i++) {
 
             Room room3 = new Room ();
             room3.setNumber ( i );
@@ -99,6 +62,48 @@ public class RoomService {
 
         }
 
+    }
+
+    public String add(Room room) {
+
+        int number = room.getNumber ();
+
+
+        if (Objects.equals ( number, "" )) {
+            return "EMPTY";
+        }
+
+        if (number == 0) {
+            return "NULL OBJECT";
+
+        }
+
+        if (number > room.MAXIMUM_NUMBER_OF_ROOMS) {
+
+            return "Maximum room number is " + room.MAXIMUM_NUMBER_OF_ROOMS ;
+
+        }
+
+        boolean responseFromRepo = roomRepository.add ( room );
+
+        if (responseFromRepo) {
+
+            return "Room was added successfully";
+        }
+        return "Room was not added successfully";
+    }
+
+
+    public boolean remove(Room room) {
+
+
+            roomRepository.remove ( room );
+
+
+            logger.log ( Level.INFO, "Room removed successfuly" );
+
+
+        return true;
     }
 
     @Override

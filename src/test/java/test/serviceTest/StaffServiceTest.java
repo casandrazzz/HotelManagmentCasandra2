@@ -19,9 +19,8 @@ public class StaffServiceTest {
 
      @BeforeAll
      void setup() {
-         new Staff ( "Rachel" );
-
-    }
+         new Staff ( "Rachel" ,24, "Luxembourg"  );
+     }
 
     @Test
     void should_getReceptionistName() {
