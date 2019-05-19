@@ -2,10 +2,10 @@ package repository;
 
 import model.people.Guest;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IGuest {
-    List<Guest> listGuest();
+    Set<Guest> guestsSet();
 
 
     boolean add(Guest guests);

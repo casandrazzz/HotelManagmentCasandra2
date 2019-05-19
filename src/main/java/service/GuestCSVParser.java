@@ -28,9 +28,7 @@ public class GuestCSVParser {
         for (String line : lines) {
             String[] tokens = line.split ( ",");
             Guest guest = new Guest(
-                    tokens [0],
-                    tokens[1] ,
-                    tokens[2]);
+            );
                     guests.add(guest);
 
         }

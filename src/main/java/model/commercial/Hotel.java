@@ -3,8 +3,14 @@ package model.commercial;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+import model.accomodation.Room;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 /**
  * Hotel has a list of rooms and a list of staff, name and address;
@@ -13,13 +19,20 @@ import org.apache.log4j.Logger;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 
 public class Hotel implements Establishment, LanguageVersion {
-    private String name;
+    private UUID randomID;
+    public  String name;
     private String address;
     private int MINIMUM_ROOMS = 5;
+    private List<Room> rooms = new ArrayList<>();
+
+
 
     private Logger logger = Logger.getLogger ( "Establishment" );
+
+
 
 
     @Override
@@ -50,7 +63,50 @@ public class Hotel implements Establishment, LanguageVersion {
 
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+
+    public static class Builder extends Hotel {
+        private UUID randomID;
+        private String name;
+        private String address;
+        private List<Room> rooms = new ArrayList<>();
+
+
+
+        public Builder randomID(UUID randomID) {
+            this.randomID = randomID;
+
+            return this;
+        }
+
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder address(String address) {
+            this.address =address;
+            return this;
+        }
+
+
+        public Hotel build() {
+
+            Hotel hotel = new Hotel();
+            hotel.setRandomID(this.randomID);
+            hotel.setName(this.name);
+            hotel.setAddress(this.address);
+
+            return hotel;
+        }
+    }
 }
 
 

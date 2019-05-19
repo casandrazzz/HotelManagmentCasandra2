@@ -5,11 +5,13 @@ import model.people.Staff;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 public class PersonRepository implements IGuest, IStaff {
+
     @Override
-    public List<Guest> listGuest() {
-        return Collections.emptyList ();
+    public Set<Guest> guestsSet() {
+        return null;
     }
 
     @Override

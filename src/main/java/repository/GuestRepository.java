@@ -4,16 +4,17 @@ import model.people.Guest;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class GuestRepository implements IGuest {
 
-    private List<Guest> guests = new ArrayList<> ();
+    private Set<Guest> guestsSet = new HashSet<>();
     private Logger logger = Logger.getLogger ( "Guest Repository " );
 
+
     @Override
-    public List<Guest> listGuest() {
+    public Set<Guest> guestsSet() {
         return null;
     }
 
@@ -21,7 +22,7 @@ public class GuestRepository implements IGuest {
     public boolean add(Guest guest) {
         if (guest !=null){
 
-            guests.add(guest);
+            guestsSet.add(guest);
             logger.log ( Level.INFO,"Guest added successfully");
             return true;
         }
@@ -35,7 +36,7 @@ public class GuestRepository implements IGuest {
     @Override
     public void remove(Guest guest) {
 
-        guests.remove ( guest );
+        guestsSet.remove ( guest );
         logger.log (Level.INFO, "Guest removed" );
 
     }

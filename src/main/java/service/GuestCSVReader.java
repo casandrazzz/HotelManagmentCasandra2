@@ -19,9 +19,7 @@ public class GuestCSVReader {
             String[] tokens = line.split ( "," );
             Guest guest;
             guest = new Guest (
-                    tokens[0],
-                    tokens[1] ,
-                    tokens[2]);
+            );
             guests.add ( guest );
             line = bufReader.readLine ();
 

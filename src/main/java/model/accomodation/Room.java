@@ -1,6 +1,7 @@
 package model.accomodation;
 
 
+import lombok.ToString;
 import org.apache.log4j.Logger;
 
 /**
@@ -10,24 +11,24 @@ import org.apache.log4j.Logger;
  * Array is used also for printing the highest price.
  * Room has a method to calculate the cost of stay, which is overridden in Apartment, StandardRoom, DoubleRoom, Penthouse classes.
  */
-
+@ToString
 
 public class Room {
 
-    private static Logger logger = Logger.getLogger ( Room.class );
-
-    private int number;
-    public final int MAXIMUM_NUMBER_OF_ROOMS = 100;
-
     public static int price;
-
+    private static Logger logger = Logger.getLogger(Room.class);
+    public final int MAXIMUM_NUMBER_OF_ROOMS = 100;
+    private int number;
     private String type;
-
+    private String name;
     private boolean occupied;
-
     private boolean cleaned;
 
 
+    public String getName() {
+
+        return name;
+    }
     public String getType() {
 
         return type;
@@ -80,7 +81,7 @@ public class Room {
     }
 
 
- }
+}
 
 
 
