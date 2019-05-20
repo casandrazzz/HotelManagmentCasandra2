@@ -4,6 +4,8 @@ package model.accomodation;
 import lombok.ToString;
 import org.apache.log4j.Logger;
 
+import java.util.UUID;
+
 /**
  * Room has a number from 1 to 100;
  * Room has a type: DOUBLE, SINGLE, APARTEMENT-> to do Enum for user input; also room types are extended in classes to define properly their attributes
@@ -19,11 +21,17 @@ public class Room {
     private static Logger logger = Logger.getLogger(Room.class);
     public final int MAXIMUM_NUMBER_OF_ROOMS = 100;
     private int number;
+    private UUID id;
     private String type;
     private String name;
     private boolean occupied;
     private boolean cleaned;
 
+    public Room(int number, String type) {
+        this.id = UUID.randomUUID();
+        this.number = number;
+        this.type = type;
+    }
 
     public String getName() {
 

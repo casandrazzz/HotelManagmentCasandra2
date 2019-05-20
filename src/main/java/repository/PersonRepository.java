@@ -1,42 +1,29 @@
 package repository;
 
-import model.people.Guest;
-import model.people.Staff;
+import model.people.Person;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 
-public class PersonRepository implements IGuest, IStaff {
+public class PersonRepository implements IRepository <Person>{
 
     @Override
-    public Set<Guest> guestsSet() {
+    public List<Person> findAll() {
         return null;
     }
 
     @Override
-    public boolean add(Guest guests) {
-        return false;
+    public Person findByName(String name) {
+        return null;
     }
 
     @Override
-    public void remove(Guest guests) {
+    public boolean addEntity(Person entity) {
+        return true;
 
     }
 
-
     @Override
-    public List<Staff> listStaff() {
-        return Collections.emptyList ();
-    }
-
-    @Override
-    public boolean add(Staff staff) {
-        return false;
-    }
-
-    @Override
-    public void remove(Staff staff) {
+    public void removeEntity(Person entity) {
 
     }
 }

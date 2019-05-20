@@ -10,6 +10,10 @@ import model.people.Guest;
 public class Penthouse extends Apartment {
     public static double price = 1000;
 
+    public Penthouse(int number, String type) {
+        super(number, type);
+    }
+
 
     @Override
     public double getPrice() {

@@ -1,8 +1,5 @@
 package app;
 
-import model.accomodation.Apartment;
-import model.accomodation.DoubleRoom;
-import model.accomodation.Penthouse;
 import model.commercial.Casino;
 import model.commercial.EstablishmentData;
 import model.commercial.Hotel;
@@ -12,7 +9,9 @@ import model.people.Guest;
 import model.people.Staff;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import repository.GuestRepository;
 import repository.HotelRepository;
+import repository.StaffRepository;
 import service.GuestService;
 import service.HotelService;
 import service.RoomService;
@@ -21,7 +20,9 @@ import service.StaffService;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import static model.accomodation.DoubleRoom.calculateCost;
 
@@ -47,8 +48,8 @@ public class MainClass {
         logger.log(Level.INFO, Constants.CALL_CENTER);
 
 
-        List<Staff> staff = new ArrayList<>();
-        List<Guest> guests = new ArrayList<>();
+        StaffRepository staff = new StaffRepository();
+        GuestRepository guests = new GuestRepository();
 
         Staff receptionist = new Staff("Annie", 25, "South");
         Staff hostess = new Staff("Jane", 28, "East");
@@ -65,7 +66,7 @@ public class MainClass {
         staff.add(valet);
         staff.add(maid);
         staff.add(accountant);
-        logger.log(Level.INFO, "Total number of staff is " + staff.size() + ".");
+        logger.log(Level.INFO, "Total number of staff is " + staff.listStaff().size() + ".");
         logger.log(Level.INFO, "Meet " + staff.toString() + ".");
         StaffService.interactions();
         StaffService.presentOffer();
@@ -85,7 +86,7 @@ public class MainClass {
         logger.log(Level.INFO, second);
 
 
-        new DoubleRoom();
+       // new DoubleRoom();
         calculateCost();
         logger.log(Level.INFO, calculateCost());
 
@@ -102,21 +103,17 @@ public class MainClass {
 
 
 
-        Apartment penthouse = new Penthouse();
-        Apartment.calculateCost();
-        logger.log(Level.INFO, penthouse.getPrice());
-        logger.log(Level.INFO, Apartment.calculateCost());
+       // Apartment penthouse = new Penthouse();
+       // Apartment.calculateCost();
+        // logger.log(Level.INFO, penthouse.getPrice());
+        //logger.log(Level.INFO, Apartment.calculateCost());
 
-        for (int i = 0; i < guests.size(); i++) {
-            logger.log(Level.INFO, guests.get(i).toString() + ".");
+        for (Guest guest : guests.guestsSet()) {
+            logger.log(Level.INFO, guest + ".");
         }
-
 
         logger.log(Level.INFO, "I am " + guest21.getName() + "." + " I am from " + guest21.getAddress() + " I'd like a " + guest21.getPreference() + " room");
 
-
-
-        RoomService.manageStatus();
         RoomService.displayApartmentPrice();
         RoomService.displayRooms();
         RoomService.sortRooms();
@@ -132,20 +129,19 @@ public class MainClass {
         Gambler gambler = new Gambler("Bruce", 28, "Florida", 200);
         gambler.checkMinimumAge();
 
-        Hotel hotel1 = new Hotel();
-        Hotel hotel2 = new Hotel();
+        Hotel hotelA = new Hotel();
+        Hotel hotelB = new Hotel();
 
 
         HotelRepository hotelRepository = new HotelRepository();
         HotelService hotelService = new HotelService(hotelRepository);
-        hotelService.validateAndAddHotels(hotel1);
-        hotelService.validateAndAddHotels(hotel2);
-        hotel1.setName("Majestic");
-        hotel2.setName("a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9");
-        logger.log(Level.INFO, hotel1.getName() + hotelService.validateAndAddHotels(hotel1));
-        logger.log(Level.INFO, hotel2.getName() + hotelService.validateAndAddHotels(hotel2));
-        logger.log(Level.INFO, hotel2.getName() + hotelService.delete(hotel2));
-        guests.size();
+        hotelService.validateAndAddHotels(hotelA);
+        hotelService.validateAndAddHotels(hotelB);
+        hotelA.setName("Majestic");
+        hotelB.setName("a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9");
+        logger.log(Level.INFO, hotelA.getName() + hotelService.validateAndAddHotels(hotelA));
+        logger.log(Level.INFO, hotelB.getName() + hotelService.validateAndAddHotels(hotelB));
+        logger.log(Level.INFO, hotelB.getName() + hotelService.delete(hotelB));
 
         GuestService.readLoyaltyStatus();
         GuestService.readRules();
@@ -167,6 +163,9 @@ public class MainClass {
 
 
     }
+
+
+
 }
 
 

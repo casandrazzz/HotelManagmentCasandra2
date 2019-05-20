@@ -38,8 +38,8 @@ public class RoomRepository implements IRoom {
 
     }
 
-    public static List<Room> getRooms() {
-        return Collections.emptyList ();
+    public List<Room> getRooms() {
+        return this.rooms;
     }
 
     public void setRooms(List<Room> rooms) {

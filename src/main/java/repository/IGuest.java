@@ -11,7 +11,4 @@ public interface IGuest {
     boolean add(Guest guests);
 
     void remove(Guest guests);
-
-
-
 }

@@ -12,6 +12,10 @@ public class StandardRoom extends Room {
     private int area = 35;
     private int NUMBER_OF_BEDS = 1;
 
+    public StandardRoom(int number, String type) {
+        super(number, type);
+    }
+
 
     public static double calculateCost() {
         return StandardRoom.price * Guest.nightsOfStay;

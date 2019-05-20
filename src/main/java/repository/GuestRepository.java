@@ -15,7 +15,7 @@ public class GuestRepository implements IGuest {
 
     @Override
     public Set<Guest> guestsSet() {
-        return null;
+        return guestsSet;
     }
 
     @Override
@@ -40,6 +40,4 @@ public class GuestRepository implements IGuest {
         logger.log (Level.INFO, "Guest removed" );
 
     }
-
-
 }

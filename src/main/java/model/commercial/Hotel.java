@@ -8,9 +8,7 @@ import model.accomodation.Room;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * Hotel has a list of rooms and a list of staff, name and address;
@@ -26,7 +24,8 @@ public class Hotel implements Establishment, LanguageVersion {
     public  String name;
     private String address;
     private int MINIMUM_ROOMS = 5;
-    private List<Room> rooms = new ArrayList<>();
+    public  List<Room> rooms = new ArrayList<>();
+    private Map<UUID, List> hotelMap = new HashMap<>();
 
 
 
@@ -80,6 +79,8 @@ public class Hotel implements Establishment, LanguageVersion {
 
 
 
+
+
         public Builder randomID(UUID randomID) {
             this.randomID = randomID;
 
@@ -96,6 +97,11 @@ public class Hotel implements Establishment, LanguageVersion {
             return this;
         }
 
+        public Builder rooms(List<Room> rooms) {
+            this.rooms =rooms;
+            return this;
+        }
+
 
         public Hotel build() {
 
@@ -103,6 +109,7 @@ public class Hotel implements Establishment, LanguageVersion {
             hotel.setRandomID(this.randomID);
             hotel.setName(this.name);
             hotel.setAddress(this.address);
+            hotel.setRooms(this.rooms);
 
             return hotel;
         }

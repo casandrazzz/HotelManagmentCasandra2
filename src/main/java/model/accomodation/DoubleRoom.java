@@ -14,6 +14,10 @@ public class DoubleRoom extends Room {
     private int area = 30;
     private int personsAllowed = 2;
 
+    public DoubleRoom(int number, String type) {
+        super(number, type);
+    }
+
 
     public static double calculateCost() {
         if (Guest.nightsOfStay >= 5)

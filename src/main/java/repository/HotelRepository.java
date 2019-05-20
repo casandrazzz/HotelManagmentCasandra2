@@ -1,37 +1,39 @@
 package repository;
 
+import lombok.ToString;
 import model.commercial.Hotel;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-public class HotelRepository implements IHotel{
+@ToString
 
-    private List<Hotel> hotels = new ArrayList<> ();
-    private Logger logger = Logger.getLogger ( "Hotel Repository " );
+public class HotelRepository implements IHotel {
+
+    private List<Hotel> hotels = new ArrayList<>();
+
+    private Logger logger = Logger.getLogger("Hotel Repository ");
 
     @Override
     public boolean add(Hotel hotel) {
-       if (hotel !=null){
+        if (hotel != null) {
 
-        hotels.add(hotel);
-           logger.log ( Level.INFO,"Hotel added successfully");
-        return true;
-          }
-       else{
-           logger.log (Level.INFO,"Failed to add hotel");
-          return false;
-       }
-   }
+            hotels.add(hotel);
+            logger.log(Level.INFO, "Hotel added successfully");
+            return true;
+        } else {
+            logger.log(Level.INFO, "Failed to add hotel");
+            return false;
+        }
+    }
 
 
     @Override
     public void remove(Hotel hotel) {
 
-        hotels.remove ( hotel );
-        logger.log (Level.INFO, "Hotel removed" );
+        hotels.remove(hotel);
+        logger.log(Level.INFO, "Hotel removed");
 
     }
 
@@ -39,6 +41,7 @@ public class HotelRepository implements IHotel{
     public List<Hotel> listHotels() {
         return hotels;
     }
+
 
 
 }
