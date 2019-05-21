@@ -1,3 +1,8 @@
+/**
+ * Contains List, add and remove methods
+ * TODO implement IRepository
+ */
+
 package repository;
 
 import lombok.ToString;

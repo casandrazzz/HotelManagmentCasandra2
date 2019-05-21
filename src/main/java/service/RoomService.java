@@ -1,3 +1,10 @@
+/**
+ * Contains add/remove methods for rooms
+ * Contains a List
+ * Contains a method for displaying rooms (needs improvement)
+ * Contains a method for sorting the rooms ascending, by name
+ */
+
 package service;
 
 import model.accomodation.Room;
@@ -123,9 +130,9 @@ public class RoomService {
 
         }
 
-        if (number > room.MAXIMUM_NUMBER_OF_ROOMS) {
+        if (number > 500) {
 
-            return "Maximum room number is " + room.MAXIMUM_NUMBER_OF_ROOMS;
+            return "Maximum room number is " + 500;
 
         }
 

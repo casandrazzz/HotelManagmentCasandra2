@@ -1,4 +1,11 @@
+/**
+ * For the moment it is used to illustrat placeholder
+ * Implements IRepository
+ * TODO to put more logic into Person Repository
+ */
+
 package repository;
+
 
 import model.people.Person;
 

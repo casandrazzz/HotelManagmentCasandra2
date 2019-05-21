@@ -2,7 +2,6 @@ package model.accomodation;
 
 
 import lombok.ToString;
-import org.apache.log4j.Logger;
 
 import java.util.UUID;
 
@@ -18,14 +17,10 @@ import java.util.UUID;
 public class Room {
 
     public static int price;
-    private static Logger logger = Logger.getLogger(Room.class);
-    public final int MAXIMUM_NUMBER_OF_ROOMS = 100;
     private int number;
     private UUID id;
     private String type;
-    private String name;
     private boolean occupied;
-    private boolean cleaned;
 
     public Room(int number, String type) {
         this.id = UUID.randomUUID();
@@ -33,10 +28,7 @@ public class Room {
         this.type = type;
     }
 
-    public String getName() {
 
-        return name;
-    }
     public String getType() {
 
         return type;
@@ -76,16 +68,6 @@ public class Room {
     public void setOccupied(boolean occupied) {
 
         this.occupied = occupied;
-    }
-
-    public boolean isCleaned() {
-
-        return cleaned;
-    }
-
-    public void setCleaned(boolean cleaned) {
-
-        this.cleaned = cleaned;
     }
 
 

@@ -1,3 +1,8 @@
+/**
+ * Contains SET, add and remove methods
+ *
+ */
+
 package repository;
 
 import model.people.Guest;

@@ -15,23 +15,19 @@ import repository.StaffRepository;
 import service.GuestService;
 import service.HotelService;
 import service.RoomService;
-import service.StaffService;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
-import static model.accomodation.DoubleRoom.calculateCost;
+import java.util.*;
 
 
 @SuppressWarnings("ResultOfMethodCallIgnored")
 public class MainClass {
 
-    private static Logger logger = Logger.getLogger ( "Main" );
+    private static Logger logger = Logger.getLogger("Main");
     private static Set<Guest> guestsSet = new HashSet<>();
+
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
         logger.info("INFO");
@@ -68,8 +64,8 @@ public class MainClass {
         staff.add(accountant);
         logger.log(Level.INFO, "Total number of staff is " + staff.listStaff().size() + ".");
         logger.log(Level.INFO, "Meet " + staff.toString() + ".");
-        StaffService.interactions();
-        StaffService.presentOffer();
+        //StaffService.interactions();
+        //StaffService.presentOffer();
 
 
         Guest guest21;
@@ -86,9 +82,9 @@ public class MainClass {
         logger.log(Level.INFO, second);
 
 
-       // new DoubleRoom();
-        calculateCost();
-        logger.log(Level.INFO, calculateCost());
+        // new DoubleRoom();
+        //calculateCost();
+        // logger.log(Level.INFO, calculateCost());
 
         Guest guest22;
         guest22 = new Guest("Gina", 25, "Colorado");
@@ -102,9 +98,8 @@ public class MainClass {
         logger.log(Level.INFO, second);
 
 
-
-       // Apartment penthouse = new Penthouse();
-       // Apartment.calculateCost();
+        // Apartment penthouse = new Penthouse();
+        // Apartment.calculateCost();
         // logger.log(Level.INFO, penthouse.getPrice());
         //logger.log(Level.INFO, Apartment.calculateCost());
 
@@ -112,22 +107,22 @@ public class MainClass {
             logger.log(Level.INFO, guest + ".");
         }
 
-        logger.log(Level.INFO, "I am " + guest21.getName() + "." + " I am from " + guest21.getAddress() + " I'd like a " + guest21.getPreference() + " room");
+        //logger.log(Level.INFO, "I am " + guest21.getName() + "." + " I am from " + guest21.getAddress() + " I'd like a " + guest21.getPreference() + " room");
 
-        RoomService.displayApartmentPrice();
-        RoomService.displayRooms();
+        //RoomService.displayApartmentPrice();
+        //RoomService.displayRooms();
         RoomService.sortRooms();
 
 
         Casino casino = new Casino(Games.SLOT_MACHINE);
-        casino.defineEstablishmentType();
-        casino.displayEstablishmentLocation();
-        casino.displayEstablishmentWorkingHours();
-        casino.presentGames();
-        casino.displayLanguage();
+        //casino.defineEstablishmentType();
+        //casino.displayEstablishmentLocation();
+        //casino.displayEstablishmentWorkingHours();
+        //casino.presentGames();
+        //casino.displayLanguage();
 
         Gambler gambler = new Gambler("Bruce", 28, "Florida", 200);
-        gambler.checkMinimumAge();
+        //gambler.checkMinimumAge();
 
         Hotel hotelA = new Hotel();
         Hotel hotelB = new Hotel();
@@ -141,10 +136,10 @@ public class MainClass {
         hotelB.setName("a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9a1a2a3a4a5a6a7a8a9");
         logger.log(Level.INFO, hotelA.getName() + hotelService.validateAndAddHotels(hotelA));
         logger.log(Level.INFO, hotelB.getName() + hotelService.validateAndAddHotels(hotelB));
-        logger.log(Level.INFO, hotelB.getName() + hotelService.delete(hotelB));
+        //logger.log(Level.INFO, hotelB.getName() + hotelService.delete(hotelB));
 
-        GuestService.readLoyaltyStatus();
-        GuestService.readRules();
+        //GuestService.readLoyaltyStatus();
+        //GuestService.readRules();
         try {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date checkIn = sdf.parse("2019-05-02");
@@ -162,8 +157,10 @@ public class MainClass {
         logger.log(Level.INFO, guestsSet.size());
 
 
-    }
 
+
+
+    }
 
 
 }

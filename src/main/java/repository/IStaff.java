@@ -1,3 +1,8 @@
+/**
+ * Contains List and add/remove methods
+ * TODO to implement IRepository
+ */
+
 package repository;
 
 import model.people.Staff;

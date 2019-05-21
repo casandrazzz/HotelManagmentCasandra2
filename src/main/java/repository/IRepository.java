@@ -1,4 +1,7 @@
 package repository;
+/**
+ * TODO IRepository to be implemented for RoomRepository, StaffRepository, HotelRepository
+ */
 
 import java.util.List;
 

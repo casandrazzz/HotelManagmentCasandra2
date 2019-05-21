@@ -1,3 +1,9 @@
+/**
+ * Contains add/remove methods
+ * Contains method for creating rooms to add/remove for the newly created hotels
+ * Contains a builder pattern for hotels
+ * Contains a Hotel Map with ID and the List of rooms which were added to each hotel
+ */
 package service;
 
 import model.accomodation.Room;
@@ -155,7 +161,7 @@ public class HotelService {
             logger.log(Level.INFO, hotel);
         }
 
-        logger.log(Level.INFO, Arrays.asList(hotelMap));
+        logger.log(Level.INFO, Collections.singletonList(hotelMap));
 
 
 

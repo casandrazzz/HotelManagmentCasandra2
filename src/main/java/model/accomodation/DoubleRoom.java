@@ -11,8 +11,6 @@ import model.people.Guest;
 
 public class DoubleRoom extends Room {
     public static double price = 200;
-    private int area = 30;
-    private int personsAllowed = 2;
 
     public DoubleRoom(int number, String type) {
         super(number, type);

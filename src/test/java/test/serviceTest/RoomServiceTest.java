@@ -55,15 +55,15 @@ public class RoomServiceTest {
 
         } );
     }
-
+    @Deprecated
     @Test
     void should_setRoom_isCleaned_for_Rooms_withNumber_between_15_and_33(){
 
         IntStream.range ( 15, 33 ).forEach ( n -> {
             Room room1 = new Room (n , "SINGLE");
             room1.setNumber ( n );
-            room1.setCleaned ( true );
-            assertTrue ( room1.isCleaned () );
+
+
 
         } );
 
