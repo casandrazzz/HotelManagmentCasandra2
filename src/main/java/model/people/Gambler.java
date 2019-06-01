@@ -35,17 +35,15 @@ public class Gambler extends Person {
     }
 
 
-    List<Integer> luckyNumber = Arrays.asList(1, 20, 35, 48, 8, 6, 7);
 
-    public static int winSomeLooseSome(List<? extends Number> list) {
 
-        int sum = 0;
-        for (Number i : list) {
+    public static void winSomeLoseSome(List<? extends Number> list) {
+        List<Integer> luckyNumber = Arrays.asList(1, 20, 35, 48, 8, 6, 7);
+        for (Number i : luckyNumber) {
 
-            sum += i.intValue();
+            i.intValue();
         }
-        return sum;
-
+        logger.log(Level.INFO,luckyNumber );
 
     }
 

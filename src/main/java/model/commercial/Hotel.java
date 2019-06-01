@@ -21,7 +21,7 @@ import java.util.*;
 
 public class Hotel implements Establishment, LanguageVersion {
     private UUID randomID;
-    public  String name;
+    private String name;
     private String address;
     private int MINIMUM_ROOMS = 5;
     public  List<Room> rooms = new ArrayList<>();

@@ -1,5 +1,5 @@
 /**
- * For the moment it is used to illustrat placeholder
+ * For the moment it is used to illustrate placeholder
  * Implements IRepository
  * TODO to put more logic into Person Repository
  */

@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 @SuppressWarnings("ResultOfMethodCallIgnored")
@@ -27,6 +28,7 @@ public class MainClass {
 
     private static Logger logger = Logger.getLogger("Main");
     private static Set<Guest> guestsSet = new HashSet<>();
+
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
@@ -52,18 +54,24 @@ public class MainClass {
         Staff valet = new Staff("Richard", 40, "North");
         Staff maid = new Staff("Chris", 35, "West");
         Staff accountant = new Staff("Fineas", 25, "Madrid");
-        accountant.setJobDescription("Prepare balance sheets, profit and loss statements and other finacial reports");
-        receptionist.setJobDescription("Receive visitors at the front desk by greeting, welcoming, directing and announcing them appropiately");
+        accountant.setJobDescription("Prepare balance sheets, profit and loss statements and other financial reports");
+        receptionist.setJobDescription("Receive visitors at the front desk by greeting, welcoming, directing and announcing them appropriately");
         hostess.setJobDescription("Present a positive first impression of the establishment's friendliness, excellent service and high standards");
         valet.setJobDescription("Stand in front of the establishment, get key from the drivers, help with any luggage");
-        maid.setJobDescription("Clean and tidy all areas to the standard cleaniness whithin time limits");
+        maid.setJobDescription("Clean and tidy all areas to the standard cleanliness within time limits");
         staff.add(receptionist);
         staff.add(hostess);
         staff.add(valet);
         staff.add(maid);
         staff.add(accountant);
-        logger.log(Level.INFO, "Total number of staff is " + staff.listStaff().size() + ".");
-        logger.log(Level.INFO, "Meet " + staff.toString() + ".");
+        logger.log(Level.INFO, "Meet " + staff + ".");
+        List<Staff>  appraisalsList = Arrays.asList(accountant, hostess);
+
+        boolean isFoundOnAppraisalList = appraisalsList.stream()
+                .anyMatch(element -> element.getJobDescription().contains("Prepare"));
+        logger.log(Level.INFO, isFoundOnAppraisalList);
+
+
         //StaffService.interactions();
         //StaffService.presentOffer();
 
@@ -96,7 +104,11 @@ public class MainClass {
         logger.log(Level.INFO, first);
         second = guestsSet.add(guest22);
         logger.log(Level.INFO, second);
-
+       List filtered = guestsSet.stream()
+                .filter(guest -> guest.getName().contains("Gina"))
+                .map(Guest::getStays)
+                .collect(Collectors.toList());
+       logger.log(Level.INFO, filtered);
 
         // Apartment penthouse = new Penthouse();
         // Apartment.calculateCost();
@@ -109,7 +121,7 @@ public class MainClass {
 
         //logger.log(Level.INFO, "I am " + guest21.getName() + "." + " I am from " + guest21.getAddress() + " I'd like a " + guest21.getPreference() + " room");
 
-        //RoomService.displayApartmentPrice();
+        RoomService.displayApartmentPrice(); //Optional si max
         //RoomService.displayRooms();
         RoomService.sortRooms();
 
@@ -155,9 +167,8 @@ public class MainClass {
 
         GuestService.builderPattern();
         logger.log(Level.INFO, guestsSet.size());
-
-
-
+        Gambler.winSomeLoseSome(Collections.singletonList(5));
+        RoomService.confirmSelection();
 
 
     }

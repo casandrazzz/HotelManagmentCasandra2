@@ -83,7 +83,7 @@ public class Casino implements Establishment, LanguageVersion  {
 
 
             case BLACKJACK:
-                logger.log ( INFO, "Blackjack is a comparing card game between ussualy several players and a dealer" );
+                logger.log ( INFO, "Blackjack is a comparing card game between usually several players and a dealer" );
 
 
             case SPANISH_21:

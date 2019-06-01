@@ -134,7 +134,7 @@ public class GuestService {
             guestRepository.remove(guest);
 
 
-            logger.log(Level.INFO, "Guest removed successfuly");
+            logger.log(Level.INFO, "Guest removed successfully");
 
 
         }
@@ -155,15 +155,7 @@ public class GuestService {
     }
 
 
-    public static int generateRandom() {
-        Random rand = new Random();
-        int rand_int1 = rand.nextInt(100);
-        return rand_int1;
-    }
-
-
-
-    public static void builderPattern() {
+     public static void builderPattern() {
 
 
         Guest guest1 = new Guest.Builder("Robert", 25, "NY")
@@ -272,6 +264,8 @@ public class GuestService {
         logger.log(Level.INFO, guestsSet.size());
         logger.log(Level.INFO,"Checking equality between guest1 and guest2 = " + guest11.equals(guest2));
         logger.log(Level.INFO,"HashSet contains Robert = " + guestsSet.contains(guest1));
+
+
     }
 
     private static void addGuestsToSet(Guest guest1, Guest guest2, Guest guest3, Guest guest4, Guest guest5, Guest guest6, Guest guest7, Guest guest8, Guest guest9, Guest guest10) {
@@ -286,6 +280,8 @@ public class GuestService {
         guestsSet.add(guest9);
         guestsSet.add(guest10);
     }
+
+
 
 
     }

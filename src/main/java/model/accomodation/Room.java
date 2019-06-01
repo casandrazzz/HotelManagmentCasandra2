@@ -7,7 +7,7 @@ import java.util.UUID;
 
 /**
  * Room has a number from 1 to 100;
- * Room has a type: DOUBLE, SINGLE, APARTEMENT-> to do Enum for user input; also room types are extended in classes to define properly their attributes
+ * Room has a type: DOUBLE, SINGLE, APARTMENT-> to do Enum for user input; also room types are extended in classes to define properly their attributes
  * Room has a status: cleaned, occupied etc.
  * Array is used also for printing the highest price.
  * Room has a method to calculate the cost of stay, which is overridden in Apartment, StandardRoom, DoubleRoom, Penthouse classes.

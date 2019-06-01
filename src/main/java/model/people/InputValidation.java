@@ -27,7 +27,7 @@ public class InputValidation extends Exception {
 
         }
         if (salary < 1 || salary > 100000) {
-            throw new InputValidation ( "Please enter values whithin the range" );
+            throw new InputValidation ( "Please enter values within the range" );
         }
         if (salary == Integer.parseInt ( "" )){
             throw new InputValidation ("For input string: \"" + salary + "\"");

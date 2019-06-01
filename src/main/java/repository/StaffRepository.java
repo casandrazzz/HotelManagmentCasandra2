@@ -4,12 +4,14 @@
  */
 package repository;
 
+import lombok.ToString;
 import model.people.Staff;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
+@ToString
 
 public class StaffRepository implements IStaff {
 
@@ -22,7 +24,7 @@ public class StaffRepository implements IStaff {
     }
 
     @Override
-    public boolean add(Staff staff) {
+    public  boolean add(Staff staff) {
         if (staff != null) {
 
             staff.add ( staff );

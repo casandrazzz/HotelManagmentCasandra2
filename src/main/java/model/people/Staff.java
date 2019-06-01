@@ -23,11 +23,7 @@ public class Staff extends Person {
 
     }
 
-    public Staff(String personName) {
-        super ();
-    }
-
-    public Staff() {
+       public Staff() {
 
     }
 
@@ -64,6 +60,7 @@ public class Staff extends Person {
 
     @Override
     public String toString() {
+
         return getName () + " - " + getJobDescription ();
     }
 

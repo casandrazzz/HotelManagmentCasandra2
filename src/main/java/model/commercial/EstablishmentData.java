@@ -27,7 +27,7 @@ public class EstablishmentData {
     public static void mapEstablishmentData() {
         List<EstablishmentData> establishmentData = Arrays.asList(
                 new EstablishmentData("Marriott Hotel", "Restaurant/Bar, SPA/Fitness Center, 24H reception, Coffee and tea facilities in all rooms, Wake up call  "),
-                new EstablishmentData("Imperial Hotel", "Restaurant/Bar, SPA/Fitness Center, 24H reception, Bycicle hire, Free Wi-Fi in all rooms  "),
+                new EstablishmentData("Imperial Hotel", "Restaurant/Bar, SPA/Fitness Center, 24H reception, Bicycle hire, Free Wi-Fi in all rooms  "),
                 new EstablishmentData("Hilton Hotel", "Restaurant/Bar, SPA/Fitness Center, 24H reception, Allergy free rooms, Sightseeing  "),
                 new EstablishmentData("Ana Hotel", "Restaurant/Bar, SPA/Fitness Center, 24H reception, Rooms with connecting doors, Car hire  "),
                 new EstablishmentData("Phoenicia Hotel", "Restaurant/Bar, SPA/Fitness Center, 24H reception, Six conference rooms, Lounge with open fire  ")

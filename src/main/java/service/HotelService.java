@@ -74,7 +74,7 @@ public class HotelService {
             hotelRepository.remove(hotel);
 
 
-            System.out.println("Hotel removed successfuly");
+            System.out.println("Hotel removed successfully");
 
 
         }
@@ -149,17 +149,18 @@ public class HotelService {
         hotels.add(hotel4);
         hotels.add(hotel5);
 
+
+
         hotelMap.put(hotel1.getRandomID(), hotel1.rooms);
         hotelMap.put(hotel2.getRandomID(), hotel2Rooms);
         hotelMap.put(hotel3.getRandomID(), hotel3Rooms);
         hotelMap.put(hotel4.getRandomID(), hotel4Rooms);
         hotelMap.put(hotel5.getRandomID(), hotel5Rooms);
 
-
-
         for (Hotel hotel : hotels){
             logger.log(Level.INFO, hotel);
         }
+
 
         logger.log(Level.INFO, Collections.singletonList(hotelMap));
 

@@ -1,7 +1,7 @@
 package model.enums;
 
 public enum ReasonForStay {
-    BUSSINES,
+    BUSINESS,
     LEISURE,
     SPECIAL
 }
