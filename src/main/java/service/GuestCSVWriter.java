@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class GuestCSVWriter {
+class GuestCSVWriter {
 
     public void writeLoyaltyStatus () throws IOException {
         String filePath = "guests.csv";

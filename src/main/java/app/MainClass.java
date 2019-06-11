@@ -17,17 +17,14 @@ import service.HotelService;
 import service.RoomService;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
+class MainClass {
 
-@SuppressWarnings("ResultOfMethodCallIgnored")
-public class MainClass {
-
-    private static Logger logger = Logger.getLogger("Main");
-    private static Set<Guest> guestsSet = new HashSet<>();
+    private static final Logger logger = Logger.getLogger("Main");
+    private static final Set<Guest> guestsSet = new HashSet<>();
 
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
@@ -82,7 +79,7 @@ public class MainClass {
         guest21 = new Guest("James", 25, "Kansas");
         guest21.setPreference("DOUBLE");
         guest21.interactions();
-        guest21.setCheckInDate(new Date());
+        guest21.setCheckInDate(LocalDate.of(2019, 5, 25));
         guest21.setReasonForStay("Business");
         boolean first = guestsSet.add(guest21);
         logger.log(Level.INFO, first);
@@ -98,7 +95,7 @@ public class MainClass {
         guest22 = new Guest("Gina", 25, "Colorado");
         guest22.setPreference("PENTHOUSE");
         guest22.interactions();
-        guest22.setCheckInDate(new Date());
+        guest22.setCheckInDate(LocalDate.of(2019, 6, 23));
         guest22.setNightsOfStay(3);
         first = guestsSet.add(guest22);
         logger.log(Level.INFO, first);
@@ -122,7 +119,7 @@ public class MainClass {
         //logger.log(Level.INFO, "I am " + guest21.getName() + "." + " I am from " + guest21.getAddress() + " I'd like a " + guest21.getPreference() + " room");
 
         RoomService.displayApartmentPrice(); //Optional si max
-        //RoomService.displayRooms();
+        //RoomService.createRooms();
         RoomService.sortRooms();
 
 
@@ -152,18 +149,18 @@ public class MainClass {
 
         //GuestService.readLoyaltyStatus();
         //GuestService.readRules();
-        try {
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            Date checkIn = sdf.parse("2019-05-02");
-            Date checkOut = sdf.parse("2019-05-23");
-            guest21.setCheckInDate(checkIn);
-            guest21.setCheckOutDate(checkOut);
-            logger.log(Level.INFO, "This is my check in date " + checkIn);
-            logger.log(Level.INFO, "This is my check out date " + checkOut);
-        } catch (ParseException e) {
-            logger.log(Level.ERROR, e);
+       // try {
+           // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+           // Date checkIn = sdf.parse("2019-05-02");
+           // Date checkOut = sdf.parse("2019-05-23");
+           // guest21.setCheckInDate(LocalDate.of(2019, 5, 23));
+           // guest21.setCheckOutDate(LocalDate.of(2019, 8,27));
+           // logger.log(Level.INFO, "This is my check in date " + );
+           // logger.log(Level.INFO, "This is my check out date " + checkOut);
+       // } catch (ParseException e) {
+        //    logger.log(Level.ERROR, e);
 
-        }
+       // }
 
         GuestService.builderPattern();
         logger.log(Level.INFO, guestsSet.size());

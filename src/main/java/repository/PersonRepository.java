@@ -1,7 +1,7 @@
-/**
- * For the moment it is used to illustrate placeholder
- * Implements IRepository
- * TODO to put more logic into Person Repository
+/*
+  For the moment it is used to illustrate placeholder
+  Implements IRepository
+  TODO to put more logic into Person Repository
  */
 
 package repository;

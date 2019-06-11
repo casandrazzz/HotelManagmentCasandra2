@@ -1,9 +1,9 @@
-/**
- * Contains add/remove methods for rooms
- * Contains a List
- * Contains a method for displaying rooms (needs improvement)
- * Contains a method for sorting the rooms ascending, by name
- * TODO confirmSelection(): Scanner for user input of selectedRoom and print a confirmation of the selected room for YES, Null, NO, with the chance to select again
+/*
+  Contains add/remove methods for rooms
+  Contains a List
+  Contains a method for displaying rooms (needs improvement)
+  Contains a method for sorting the rooms ascending, by name
+  TODO confirmSelection(): Scanner for user input of selectedRoom and print a confirmation of the selected room for YES, Null, NO, with the chance to select again
  */
 
 package service;
@@ -20,35 +20,36 @@ import java.util.stream.Stream;
 
 public class RoomService {
 
-    private static Logger logger = Logger.getLogger("RoomService");
-    private RoomRepository roomRepository;
+    private static final Logger logger = Logger.getLogger("RoomService");
+    private final RoomRepository roomRepository;
 
     public RoomService(RoomRepository roomRepository) {
         this.roomRepository = roomRepository;
     }
 
 
-    public static void displayRooms() {
+    public static void createRooms() {
 
-        List<Room> rooms = new ArrayList<>();
+        //noinspection MismatchedQueryAndUpdateOfCollection
+        Vector<Room> hotelRooms = new Vector<>();
 
         IntStream.range(1, 33).forEach(n -> {
             Room room1 = new Room(n, "SINGLE");
-            room1.setPrice(100);
-            rooms.add(room1);
+            //room1.setPrice(100);
+            hotelRooms.add(room1);
             logger.log(Level.INFO, room1.getNumber() + " is a  " + room1.getType() + " , Price: " + room1.getPrice());
 
         });
         IntStream.range(34, 66).forEach(n -> {
             Room room2 = new Room(n, "DOUBLE");
-            rooms.add(room2);
+            hotelRooms.add(room2);
             logger.log(Level.INFO, room2.getNumber() + " is " + room2.getType() + ", Price: " + room2.getPrice());
 
         });
 
         IntStream.range(67, 100).forEach(n -> {
             Room room3 = new Room(n, "APARTMENT");
-            rooms.add(room3);
+            hotelRooms.add(room3);
             logger.log(Level.INFO, room3.getNumber() + " is " + room3.getType());
 
         });
@@ -99,51 +100,46 @@ public class RoomService {
         rooms.forEach(room -> System.out.println(room.getType()));
         Comparator<Room> sortByType = Comparator.comparing(Room::getType);
 
-        List <Room> streamToSortList = rooms.stream()
+        List<Room> streamToSortList = rooms.stream()
                 .sorted(sortByType)
                 .collect(Collectors.toList());
         streamToSortList.forEach(System.out::println);
 
 
-
-   //     rooms.sort(sortByType);
-   //     System.out.println("Sorted List: ");
-   //     for (Room room : rooms) {
-   //         logger.log(Level.INFO, room);
-   //     }
+        //     rooms.sort(sortByType);
+        //     System.out.println("Sorted List: ");
+        //     for (Room room : rooms) {
+        //         logger.log(Level.INFO, room);
+        //     }
     }
 
 
-      public static void displayApartmentPrice() {
+    public static void displayApartmentPrice() {
         Optional<Integer> apartmentPrice = Stream.of(100, 200, 300)
                 .max(Comparator.comparing(Integer::valueOf));
-          apartmentPrice.ifPresent(integer -> System.out.println(apartmentPrice.get()));
+        apartmentPrice.ifPresent(integer -> System.out.println(apartmentPrice.get()));
 
 
-
-        }
+    }
 
     public static void confirmSelection() {
         Optional<String> selectedRoom = Optional.of("Double");
-                String option1 = "Yes";
-                String option2 = null;
-                String option3 = "No";
+        String option1 = "Yes";
+        String option2 = null;
+        String option3 = "No";
 
-                logger.log(Level.INFO, "Selected Room is" + selectedRoom);
-                logger.log(Level.INFO, Optional.of(option1));
-                logger.log(Level.INFO, Optional.ofNullable(option2));
-                logger.log(Level.INFO, Optional.of(option3));
+        logger.log(Level.INFO, "Selected Room is" + selectedRoom);
+        logger.log(Level.INFO, Optional.of(option1));
+        logger.log(Level.INFO, Optional.empty());
+        logger.log(Level.INFO, Optional.of(option3));
 
-                List<String> options = Arrays.asList("Yes" , null);
-                String validOption = options.stream()
-                        .reduce("",(o1, o2)-> o1.contains("Y") ? o1: o2);
+        List<String> options = Arrays.asList("Yes", null);
+        String validOption = options.stream()
+                .reduce("", (o1, o2) -> o1.contains("Y") ? o1 : o2);
 
-                logger.log(Level.INFO, validOption);
+        logger.log(Level.INFO, validOption);
 
     }
-
-
-
 
 
     public String add(Room room) {

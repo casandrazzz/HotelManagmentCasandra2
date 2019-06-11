@@ -1,6 +1,6 @@
-/**
- *  Contains List and add/remove methods
- *  TODO to implement IRepository
+/*
+   Contains List and add/remove methods
+   TODO to implement IRepository
  */
 package repository;
 
@@ -15,8 +15,8 @@ import java.util.List;
 
 public class StaffRepository implements IStaff {
 
-    private List<Staff> staff = new ArrayList<> ();
-    private Logger logger = Logger.getLogger ( "Staff Repository " );
+    private final List<Staff> staff = new ArrayList<> ();
+    private final Logger logger = Logger.getLogger ( "Staff Repository " );
 
     @Override
     public List<Staff> listStaff() {

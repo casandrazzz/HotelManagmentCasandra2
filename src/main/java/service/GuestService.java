@@ -12,6 +12,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.*;
 
 import static model.enums.Responses.NO;
@@ -21,10 +22,10 @@ import static model.enums.Responses.YES;
 
 
 public class GuestService {
-    private static Logger logger = Logger.getLogger("Guest Service");
+    private static final Logger logger = Logger.getLogger("Guest Service");
 
-    private GuestRepository guestRepository;
-    private static Set<Guest> guestsSet = new HashSet<>();
+    private final GuestRepository guestRepository;
+    private static final Set<Guest> guestsSet = new HashSet<>();
 
 
     public GuestService(GuestRepository guestRepository) {
@@ -60,8 +61,6 @@ public class GuestService {
             GuestCSVReader reader = new GuestCSVReader();
 
             String content;
-            content = "Gloria James, 35, Holland, GOLD\n" +
-                    "Michael Lynn, 42, UK, SILVER";
 
             guests = reader.readGuests(new FileReader(fileName));
             Guest gloria = guests.get(1);
@@ -161,39 +160,47 @@ public class GuestService {
         Guest guest1 = new Guest.Builder("Robert", 25, "NY")
                 .id(1)
                 .stays(1)
+                .checkIn(LocalDate.of(2019,8,20))
                 .build();
         Guest guest2 = new Guest.Builder("Robert", 25, "NY")
                 .id(1)
                 .stays(1)
+                .checkIn(LocalDate.of(2019,9,20))
                 .build();
         Guest guest3 = new Guest.Builder("James", 25, "NY")
                 .id(2)
                 .name("James")
+                .checkIn(LocalDate.of(2019,10,20))
                 .stays(2)
                 .build();
         Guest guest4 = new Guest.Builder("James", 25, "NY")
                 .id(2)
                 .name("James")
+                .checkIn(LocalDate.of(2019,11,20))
                 .stays(2)
                 .build();
         Guest guest5 = new Guest.Builder("Leona", 25, "NY")
                 .id(5)
                 .name("Leona")
+                .checkIn(LocalDate.of(2019,7,20))
                 .stays(5)
                 .build();
         Guest guest6 = new Guest.Builder("Ana", 25, "NY")
                 .id(6)
                 .name("Ana")
+                .checkIn(LocalDate.of(2019,8,21))
                 .stays(6)
                 .build();
         Guest guest7 = new Guest.Builder("Laura", 25, "NY")
                 .id(7)
                 .name("Laura")
+                .checkIn(LocalDate.of(2019,6,20))
                 .stays(7)
                 .build();
         Guest guest8 = new Guest.Builder("Katrine", 25, "NY")
                 .id(8)
                 .name("Katrine")
+                .checkIn(LocalDate.of(2019,5,20))
                 .stays(8)
                 .build();
         Guest guest9 = new Guest.Builder("Chloe", 25, "NY")

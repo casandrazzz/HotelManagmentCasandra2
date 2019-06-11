@@ -13,13 +13,13 @@ import java.util.Set;
 
 public class EstablishmentData {
 
-    private String name;
+    private final String name;
 
-    private Set<String> facilities;
+    private final Set<String> facilities;
 
-    private static org.apache.log4j.Logger logger = Logger.getLogger ( "Establishment Data Class" );
+    private static final org.apache.log4j.Logger logger = Logger.getLogger ( "Establishment Data Class" );
 
-    public EstablishmentData(String name, String... facilities) {
+    private EstablishmentData(String name, String... facilities) {
         this.name = name;
         this.facilities = new HashSet<>(Arrays.asList(facilities));
     }

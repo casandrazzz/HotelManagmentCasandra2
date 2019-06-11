@@ -3,11 +3,10 @@ package test;
 import model.people.Gambler;
 import org.junit.jupiter.api.Test;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class GamblerTest {
+class GamblerTest {
 
     private Gambler gambler;
 
@@ -23,7 +22,7 @@ public class GamblerTest {
 
         //THEN
 
-        assertEquals ( true, gambler.checkMinimumAge () );
+        assertTrue(gambler.checkMinimumAge());
     }
 
     @Test
@@ -37,7 +36,7 @@ public class GamblerTest {
 
         //THEN
 
-        assertEquals ( true, gambler1.checkMinimumAge ());
+        assertTrue(gambler1.checkMinimumAge());
     }
 
     @Test

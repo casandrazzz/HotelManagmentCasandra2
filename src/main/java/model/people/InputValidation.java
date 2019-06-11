@@ -9,7 +9,7 @@ public class InputValidation extends Exception {
 
     private static final Logger logger = Logger.getLogger ( "Validation input" );
 
-    public InputValidation(String message) {
+    private InputValidation(String message) {
 
         super ( message );
     }

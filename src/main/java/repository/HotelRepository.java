@@ -1,6 +1,6 @@
-/**
- * Contains List, add and remove methods
- * TODO implement IRepository
+/*
+  Contains List, add and remove methods
+  TODO implement IRepository
  */
 
 package repository;
@@ -16,9 +16,9 @@ import java.util.*;
 
 public class HotelRepository implements IHotel {
 
-    private List<Hotel> hotels = new ArrayList<>();
+    private final List<Hotel> hotels = new ArrayList<>();
 
-    private Logger logger = Logger.getLogger("Hotel Repository ");
+    private final Logger logger = Logger.getLogger("Hotel Repository ");
 
     @Override
     public boolean add(Hotel hotel) {

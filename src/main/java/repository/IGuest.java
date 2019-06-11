@@ -4,7 +4,7 @@ import model.people.Guest;
 
 import java.util.Set;
 
-public interface IGuest {
+interface IGuest {
     Set<Guest> guestsSet();
 
 

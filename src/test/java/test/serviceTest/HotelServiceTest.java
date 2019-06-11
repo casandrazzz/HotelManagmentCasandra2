@@ -19,8 +19,7 @@ import static org.mockito.ArgumentMatchers.any;
  */
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Hotel Service Test")
-
-public class HotelServiceTest {
+class HotelServiceTest {
     @Mock
     private static HotelRepository hotelRepository;
 
@@ -34,7 +33,7 @@ public class HotelServiceTest {
     }
 
     @Test
-    public void should_notAddHotel_whenName_isLongerThan50char() {
+    void should_notAddHotel_whenName_isLongerThan50char() {
         Hotel hotel = new Hotel ();
         hotel.setName ( "45678955555555555555555555555555555555555555555555555555555555555" );
         Mockito.lenient ().when ( hotelRepository.add ( any ( Hotel.class ) ) ).thenReturn ( false );

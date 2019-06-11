@@ -1,6 +1,6 @@
-/**
- *  Contains List and add/remove methods
- *  TODO to implement IRepository
+/*
+   Contains List and add/remove methods
+   TODO to implement IRepository
  */
 
 package repository;
@@ -16,7 +16,7 @@ import java.util.List;
 public class RoomRepository implements IRoom {
 
 
-    private Logger logger = Logger.getLogger ( "Room Repository" );
+    private final Logger logger = Logger.getLogger ( "Room Repository" );
 
     private List<Room> rooms = new ArrayList<> ();
 

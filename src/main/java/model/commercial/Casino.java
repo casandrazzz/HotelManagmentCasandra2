@@ -13,9 +13,9 @@ import static org.apache.log4j.Level.INFO;
 public class Casino implements Establishment, LanguageVersion  {
 
 
-    private static Logger logger = Logger.getLogger ( "Casino Class" );
+    private static final Logger logger = Logger.getLogger ( "Casino Class" );
     private final int MINIMUM_AGE = 18;
-    private Games games;
+    private final Games games;
 
     public Casino(Games games) {
         this.games = games;

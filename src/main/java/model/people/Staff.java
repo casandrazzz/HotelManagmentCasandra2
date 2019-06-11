@@ -32,21 +32,20 @@ public class Staff extends Person {
         return jobDescription;
     }
 
-    public String setJobDescription(String jobDescription) {
+    public void setJobDescription(String jobDescription) {
         this.jobDescription = jobDescription;
-        return jobDescription;
     }
 
 
 
-/**
- * Staff offers information about room price for room type
- * <p>
- * Offer applies to minimum five nights of stay.
- * Have to check if guest nights of stay >= 5, then apply discount to costOfStay.
- * <p>
- * Offer applies to minimum five nights of stay.
- * Have to check if guest nights of stay >= 5, then apply discount to costOfStay.
+/*
+  Staff offers information about room price for room type
+  <p>
+  Offer applies to minimum five nights of stay.
+  Have to check if guest nights of stay >= 5, then apply discount to costOfStay.
+  <p>
+  Offer applies to minimum five nights of stay.
+  Have to check if guest nights of stay >= 5, then apply discount to costOfStay.
  */
 
 

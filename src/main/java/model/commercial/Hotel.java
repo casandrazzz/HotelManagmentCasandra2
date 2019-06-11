@@ -26,6 +26,7 @@ public class Hotel implements Establishment, LanguageVersion {
     private int MINIMUM_ROOMS = 5;
     public  List<Room> rooms = new ArrayList<>();
     private Map<UUID, List> hotelMap = new HashMap<>();
+    private Vector<Room> hotelRooms = new Vector<>();
 
 
 
@@ -76,8 +77,14 @@ public class Hotel implements Establishment, LanguageVersion {
         private String name;
         private String address;
         private List<Room> rooms = new ArrayList<>();
+        private Vector<Room> hotelRooms = new Vector<>();
 
 
+        public Builder hotelRooms(Vector<Room> hotelRooms) {
+            this.hotelRooms = hotelRooms;
+
+            return this;
+        }
 
 
 
@@ -110,6 +117,7 @@ public class Hotel implements Establishment, LanguageVersion {
             hotel.setName(this.name);
             hotel.setAddress(this.address);
             hotel.setRooms(this.rooms);
+            hotel.setHotelRooms(this.hotelRooms);
 
             return hotel;
         }

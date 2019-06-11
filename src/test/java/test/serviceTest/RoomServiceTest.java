@@ -16,20 +16,17 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 
 @ExtendWith(MockitoExtension.class)
-
-public class RoomServiceTest {
+class RoomServiceTest {
     @Mock
     private static RoomRepository roomRepository;
 
-    private static RoomService roomService;
-
     @BeforeAll
     static void setup() {
-        roomService = new RoomService ( roomRepository );
+        RoomService roomService = new RoomService(roomRepository);
     }
 
     @Test
-    public void should_setPrice_100_for_Rooms_withNumber_lessThan_33() {
+    void should_setPrice_100_for_Rooms_withNumber_lessThan_33() {
 
         int roomNumber = 1;
         Room room = null;

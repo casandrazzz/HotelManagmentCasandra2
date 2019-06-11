@@ -22,7 +22,7 @@ public class Penthouse extends Apartment {
 
     @Override
     public void setPrice(int price) {
-        this.price = price;
+        Penthouse.price = price;
     }
 
     @Deprecated

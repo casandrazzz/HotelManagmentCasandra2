@@ -10,7 +10,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class StaffRepositoryTest {
+class StaffRepositoryTest {
 
     private static StaffRepository staffRepository;
 

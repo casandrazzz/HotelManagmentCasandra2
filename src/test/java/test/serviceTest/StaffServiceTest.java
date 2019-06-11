@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Test for Staff")
 @TestInstance ( TestInstance.Lifecycle.PER_CLASS )
-public class StaffServiceTest {
+class StaffServiceTest {
     @Mock
     private static StaffRepository staffRepository;
 

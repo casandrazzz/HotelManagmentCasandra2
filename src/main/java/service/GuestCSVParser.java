@@ -4,6 +4,7 @@ import model.people.Guest;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class GuestCSVParser {
         StringBuilder builder = new StringBuilder (  );
 
         while (readBytes > 0){
-            builder.append(new String ( buffer, 0 , readBytes, "UTF-8" ));
+            builder.append(new String ( buffer, 0 , readBytes, StandardCharsets.UTF_8));
             readBytes = csvInputStream.read (buffer);
         }
 

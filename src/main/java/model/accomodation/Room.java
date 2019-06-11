@@ -18,7 +18,7 @@ public class Room {
 
     public static int price;
     private int number;
-    private UUID id;
+    private final UUID id;
     private String type;
     private boolean occupied;
 

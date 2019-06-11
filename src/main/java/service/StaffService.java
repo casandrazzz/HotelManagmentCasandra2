@@ -1,6 +1,6 @@
-/**
- * Contains logic for interacting with the client
- * TODO to add methods for hiring staff and necessary validation
+/*
+  Contains logic for interacting with the client
+  TODO to add methods for hiring staff and necessary validation
  */
 
 package service;
@@ -15,10 +15,10 @@ import java.util.Scanner;
 import static model.people.Guest.nightsOfStay;
 import static org.apache.log4j.Level.INFO;
 
-public class StaffService {
+class StaffService {
 
     private static final StaffRepository staff = new StaffRepository();
-    private static Logger logger = Logger.getLogger("StaffService");
+    private static final Logger logger = Logger.getLogger("StaffService");
 
     public static void interactions() {
 

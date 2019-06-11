@@ -7,7 +7,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -18,13 +18,14 @@ public class Guest extends Person implements Serializable {
     public static final String CLIENT_TYPE_SILVER = "SILVER";
 
     public static int nightsOfStay;
-    private Date checkInDate;
-    private Date checkOutDate;
+    private LocalDate checkInDate;
+    private LocalDate checkOutDate;
     private String preference;
     private int stays;
     private String reasonForStay;
     private String clientType;
     private int id;
+
 
     private Logger logger = Logger.getLogger ( "Guest" );
 
@@ -49,6 +50,7 @@ public class Guest extends Person implements Serializable {
         private int id;
         private String name;
         private int stays;
+        private LocalDate checkInDate;
 
         public Builder(String personName, int age, String personAddress) {
             super(personName, age, personAddress);
@@ -70,6 +72,11 @@ public class Guest extends Person implements Serializable {
             return this;
         }
 
+        public Builder checkIn(LocalDate checkIn) {
+            this.checkInDate =checkInDate;
+            return this;
+        }
+
         public Guest build() {
 
             Guest guest = new Guest();
@@ -83,7 +90,7 @@ public class Guest extends Person implements Serializable {
 
 
     public void setNightsOfStay(int nightsOfStay) {
-        this.nightsOfStay = nightsOfStay;
+        Guest.nightsOfStay = nightsOfStay;
     }
 
 

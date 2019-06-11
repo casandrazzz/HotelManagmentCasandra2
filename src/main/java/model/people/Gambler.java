@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Gambler extends Person {
     private int cash;
-    private static Logger logger = Logger.getLogger("Gambler Class");
+    private static final Logger logger = Logger.getLogger("Gambler Class");
 
 
     public Gambler(String personName, int age, String personAddress, int cash) {

@@ -1,6 +1,6 @@
 package model.commercial;
 
-public interface Establishment {
+interface Establishment {
 
      void defineEstablishmentType();
      void displayEstablishmentLocation();

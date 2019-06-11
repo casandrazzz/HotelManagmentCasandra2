@@ -1,8 +1,8 @@
-/**
- * Contains add/remove methods
- * Contains method for creating rooms to add/remove for the newly created hotels
- * Contains a builder pattern for hotels
- * Contains a Hotel Map with ID and the List of rooms which were added to each hotel
+/*
+  Contains add/remove methods
+  Contains method for creating rooms to add/remove for the newly created hotels
+  Contains a builder pattern for hotels
+  Contains a Hotel Map with ID and the List of rooms which were added to each hotel
  */
 package service;
 
@@ -21,14 +21,14 @@ import static model.enums.Responses.YES;
 
 public class HotelService {
 
-    private static Logger logger = Logger.getLogger("Hotel Service");
+    private static final Logger logger = Logger.getLogger("Hotel Service");
 
     private static List<Hotel> hotels = new ArrayList<>();
 
     private static HotelRepository hotelRepository;
 
     public HotelService(HotelRepository hotelRepository) {
-        this.hotelRepository = hotelRepository;
+        HotelService.hotelRepository = hotelRepository;
     }
 
     public String validateAndAddHotels(Hotel hotel) {
@@ -36,7 +36,7 @@ public class HotelService {
         String name = hotel.getName();
 
 
-        if (name == ("")) {
+        if (Objects.equals(name, "")) {
             return "EMPTY";
         }
 
@@ -86,8 +86,8 @@ public class HotelService {
         return true;
     }
 
-    public static List<Room> generateRooms(int start, int end, String type) {
-        List<Room> returnList = new ArrayList<Room>();
+    private static List<Room> generateRooms(int start, int end, String type) {
+        List<Room> returnList = new ArrayList<>();
         for (int i = start; i < end; i++) {
             Room room = new Room(i, type);
             returnList.add(room);

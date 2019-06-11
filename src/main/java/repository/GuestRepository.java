@@ -1,6 +1,6 @@
-/**
- * Contains SET, add and remove methods
- *
+/*
+  Contains SET, add and remove methods
+
  */
 
 package repository;
@@ -14,8 +14,8 @@ import java.util.Set;
 
 public class GuestRepository implements IGuest {
 
-    private Set<Guest> guestsSet = new HashSet<>();
-    private Logger logger = Logger.getLogger ( "Guest Repository " );
+    private final Set<Guest> guestsSet = new HashSet<>();
+    private final Logger logger = Logger.getLogger ( "Guest Repository " );
 
 
     @Override

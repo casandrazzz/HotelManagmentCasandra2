@@ -16,10 +16,11 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class GuestServiceTest {
+class GuestServiceTest {
     @Mock
     private static GuestRepository guestRepository;
 
@@ -29,11 +30,9 @@ public class GuestServiceTest {
     @Mock
     private static GuestCSVReader reader;
 
-    private static GuestService guestService;
-
     @BeforeAll
     static void setup() {
-        guestService = new GuestService ( guestRepository );
+        GuestService guestService = new GuestService(guestRepository);
         parser = new GuestCSVParser ();
         reader = new GuestCSVReader ();
 
@@ -52,7 +51,7 @@ public class GuestServiceTest {
     void test_NullPointerException_isThrown() {
         assertThrows ( NullPointerException.class, () -> {
             String fileName = null;
-            new FileInputStream ( fileName );
+            new FileInputStream (Objects.requireNonNull(fileName));
         } );
     }
 

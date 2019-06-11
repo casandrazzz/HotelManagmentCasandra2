@@ -3,13 +3,13 @@ package model.enums;
 import java.util.Scanner;
 
 public enum Responses {
-    YES ("yes", true),
-    NO ("no", true ),
-    EMPTY ("no response", true );
+    YES ("yes"),
+    NO ("no"),
+    EMPTY ("no response");
 
-    public final String message;
+    private final String message;
 
-    Responses(String message, boolean b){
+    Responses(String message){
         this.message=message;
     }
 

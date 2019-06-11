@@ -4,7 +4,7 @@ import model.commercial.Hotel;
 
 import java.util.List;
 
-public interface IHotel {
+interface IHotel {
 
     boolean add(Hotel hotel);
 
