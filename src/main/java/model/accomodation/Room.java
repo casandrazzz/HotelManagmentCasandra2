@@ -4,6 +4,7 @@ package model.accomodation;
 import lombok.ToString;
 
 import java.util.UUID;
+import java.util.Vector;
 
 /**
  * Room has a number from 1 to 100;
@@ -21,6 +22,8 @@ public class Room {
     private final UUID id;
     private String type;
     private boolean occupied;
+
+    Vector<Room> hotelRooms = new Vector<>();
 
     public Room(int number, String type) {
         this.id = UUID.randomUUID();

@@ -2,19 +2,21 @@ package threads;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDate;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Setter
 @Getter
+@ToString
 class CheckInData {
     private double numberOfPersons;
 
     LocalDate startDate = LocalDate.now() ;//start date
     long start = startDate.toEpochDay();
 
-    LocalDate endDate = LocalDate.of(2019, 12, 31);; //end date
+    LocalDate endDate = LocalDate.of(2019, 12, 31); //end date
     long end = endDate.toEpochDay();
 
     long checkIn ;
