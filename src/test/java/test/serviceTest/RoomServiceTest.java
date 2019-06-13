@@ -39,6 +39,7 @@ class RoomServiceTest {
         }
 
         Mockito.verify ( roomRepository, times ( 1 ) ).add ( room );
+
         assertEquals ( 100, room.getPrice () );
     }
     @Test

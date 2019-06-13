@@ -5,7 +5,9 @@ import lombok.Setter;
 import model.accomodation.Room;
 import model.commercial.Hotel;
 
+import java.util.ArrayList;
 import java.util.Vector;
+
 @Getter
 @Setter
 public class StatisticsThread extends Thread {
@@ -32,11 +34,13 @@ public class StatisticsThread extends Thread {
                 while (true) try {
                      synchronized (hotelRooms)
                      {
-                        System.out.println("Statistics:" + hotelRooms);
+
                         hotelRooms.stream()
                                 .findFirst()
-                                .filter(room -> room.getType().contains("SINGLE"))
-                                .map(Room::getNumber);
+                                .filter(Room::isOccupied)
+                                .map(Room::getType);
+                         System.out.println("Statistics:" + holdsLock(hotelRooms) + new ArrayList<>(hotelRooms));
+
 
                        // System.out.println(hotelRooms);
 

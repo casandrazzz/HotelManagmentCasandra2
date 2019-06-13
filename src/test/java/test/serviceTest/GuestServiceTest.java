@@ -3,6 +3,7 @@ package test.serviceTest;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import repository.GuestRepository;
 import service.GuestCSVParser;
 import service.GuestCSVReader;
@@ -67,7 +68,7 @@ class GuestServiceTest {
             }
         } catch (IOException e) {
             e.printStackTrace ();
-
+            Mockito.doNothing().doThrow(new IOException());
 
         }
     }

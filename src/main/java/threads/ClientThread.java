@@ -5,8 +5,8 @@ import lombok.Setter;
 import model.accomodation.Room;
 import model.commercial.Hotel;
 
+import java.util.Random;
 import java.util.Vector;
-import java.util.stream.IntStream;
 
 
 @Setter
@@ -39,69 +39,62 @@ public class ClientThread implements Runnable {
         long startTime = System.currentTimeMillis();
 
 
-        // lock rooms from Hotel (? maybe sync)
 
-        // get Rooms
         Vector<Room> hotelRooms = this.hotel.getHotelRooms();
-        Vector<Room> toRemove = new Vector<>();
+
+
+     //   IntStream.range(1, 5).forEach(n -> {
+       //     Room room1 = new Room(n, "SINGLE");
+         //   hotelRooms.add(room1);
+
+       // });
+       // IntStream.range(6, 10).forEach(n -> {
+         //   Room room2 = new Room(n, "DOUBLE");
+           // hotelRooms.add(room2);
+
+
+        //});
+
+        //IntStream.range(11,17 ).forEach(n -> {
+          //  Room room3 = new Room(n, "APARTMENT");
+            //hotelRooms.add(room3);
+
+
+        //});
+
+
+
         new Thread(() ->{
-            synchronized (hotelRooms){
-
-                IntStream.range(1, 35).forEach(n -> {
-                    Room room1 = new Room(n, "SINGLE");
-                    hotelRooms.add(room1);
-                    //   logger.log(Level.INFO, room1.getNumber() + " is a  " + room1.getType() + " , Price: " + room1.getPrice());
-
-                });
-                IntStream.range(36, 66).forEach(n -> {
+            for (int n = 1; n<10; n++)
+                synchronized (hotelRooms) {
                     Room room2 = new Room(n, "DOUBLE");
-                    hotelRooms.add(room2);
-                    // logger.log(Level.INFO, room2.getNumber() + " is " + room2.getType() + ", Price: " + room2.getPrice());
-
-                });
-
-                IntStream.range(67, 100).forEach(n -> {
                     Room room3 = new Room(n, "APARTMENT");
+                    room3.setOccupied(true);
+                    hotelRooms.add(room2);
                     hotelRooms.add(room3);
-                    //logger.log(Level.INFO, room3.getNumber() + " is " + room3.getType());
+                    System.out.println("Produced: " + room3 + Thread.currentThread());
+                    System.out.println("List content: " + hotelRooms);
+                    System.out.println("Room booked from " + getCheckInData());
 
-                });
-
-
-            }
-
-                for (Room room : hotelRooms) {
-                    if (!room.isOccupied()) {
-                        room.setOccupied(true);
-                        toRemove.add(room);
-                        System.out.println("Room " + room.getNumber() + " booked from " + getCheckInData());
-                        // System.out.println("Number of occupied rooms is " + occupiedRooms.size());
-                    }
                 }
-                hotelRooms.removeAll(toRemove);
 
-
-                // find empty room - done
-
-                // mark room as booked - done
-
-
-                //for (int i = 1; i <= 5; i++) {
 
                 try {
-                    Thread.sleep(6000);
+                    Thread.sleep(6000 + new Random().nextInt(18));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                    //  }
-
-
                 }
 
-                long endTime = System.currentTimeMillis();
-                long difference = endTime - startTime;
-                System.out.println("Duration Thread " + Thread.currentThread().getName() + ": " + difference);
+
+
+
+              //  long endTime = System.currentTimeMillis();
+              //  long difference = endTime - startTime;
+              //  System.out.println("Duration Thread " + Thread.currentThread().getName() + ": " + difference);
             }).start();
         }
+
+
 }
 
 

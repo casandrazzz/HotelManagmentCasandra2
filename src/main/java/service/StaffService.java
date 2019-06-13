@@ -5,8 +5,8 @@
 
 package service;
 
+import exceptions.InputValidation;
 import model.accomodation.*;
-import model.people.InputValidation;
 import org.apache.log4j.Logger;
 import repository.StaffRepository;
 
@@ -36,8 +36,9 @@ class StaffService {
             try {
 
                 throw new InputValidation();
-            } catch (InputValidation existingNumber) {
-                existingNumber.printStackTrace();
+
+            } catch (InputValidation inputValidation) {
+                inputValidation.printStackTrace();
             }
             logger.log(INFO, "Enter an option that is between 1 and 4...");
             reader = new Scanner(System.in);
@@ -50,8 +51,9 @@ class StaffService {
             try {
 
                 throw new InputValidation();
-            } catch (InputValidation existingNumber) {
-                existingNumber.printStackTrace();
+
+            } catch (InputValidation inputValidation) {
+                inputValidation.printStackTrace();
             }
             logger.log(INFO, "Enter an option that is between 1 and 4...");
             reader = new Scanner(System.in);

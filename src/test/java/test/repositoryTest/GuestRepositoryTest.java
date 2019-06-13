@@ -5,8 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import repository.GuestRepository;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -48,6 +47,16 @@ class GuestRepositoryTest {
 
 
     }
+
+//    @Test
+//    void AssertThatGuestIsInList() {
+//        List<Guest> guestRepository = new ArrayList<> ();
+//        Guest guest = new Guest ("Chris", 31, "Spain");
+//        guestRepository.add ( guest );
+
+//        assertThat(
+//                Arrays.asList(guestRepository.contains(guest), guest.getName()));
+//    }
 
 
 }

@@ -27,7 +27,6 @@ public class ThreadMain {
         Runnable clientThread2 = new ClientThread(hotel, checkInData);
         clientThread2.run();
         StatisticsThread statisticsThread = new StatisticsThread("Statistics", hotelRooms);
-        statisticsThread.start();
         statisticsThread.run();
         statisticsThread.displayStatistics();
 

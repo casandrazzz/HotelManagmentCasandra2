@@ -1,4 +1,4 @@
-package test;
+package test.serviceTest;
 
 import model.people.Gambler;
 import org.junit.jupiter.api.Test;

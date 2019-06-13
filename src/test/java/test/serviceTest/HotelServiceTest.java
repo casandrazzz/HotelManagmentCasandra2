@@ -56,11 +56,13 @@ class HotelServiceTest {
     void should_notAddHotel_whenName_isNull() {
         Hotel hotel = new Hotel ();
         hotel.setName ( null );
-        Mockito.lenient ().when ( hotelRepository.add ( any ( Hotel.class ) ) ).thenReturn ( false );
-        //   doReturn(false).when(hotelRepository).add(any(Hotel.class));
+       // Mockito.lenient ().when ( hotelRepository.add ( any ( Hotel.class ) ) ).thenReturn ( false );
+        Mockito.lenient ().doReturn(false).when(hotelRepository).add(any(Hotel.class));
         String response = hotelService.validateAndAddHotels ( hotel );
         assertEquals ( "NULL OBJECT", response );
     }
 
+    }
 
-}
+
+

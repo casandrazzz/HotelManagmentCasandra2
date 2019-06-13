@@ -15,7 +15,7 @@ public class Staff extends Person {
 
     private static Logger logger = Logger.getLogger ( "Staff Class" );
     private String jobDescription;
-    static int salary;
+    public static int salary;
 
 
     public Staff(String personName, int age, String personAddress) {
