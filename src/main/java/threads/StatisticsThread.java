@@ -44,9 +44,9 @@ public class StatisticsThread extends Thread {
 
                        // System.out.println(hotelRooms);
 
-
+                         Thread.sleep(5000);
                     }
-                    Thread.sleep(5000);
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

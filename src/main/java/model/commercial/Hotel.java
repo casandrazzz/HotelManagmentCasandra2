@@ -1,5 +1,6 @@
 package model.commercial;
 
+import database.HotelGuide;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,9 +25,11 @@ public class Hotel implements Establishment, LanguageVersion {
     private String name;
     private String address;
     private int MINIMUM_ROOMS = 5;
+    private boolean allowsPets;
     public  List<Room> rooms = new ArrayList<>();
     private Map<UUID, List> hotelMap = new HashMap<>();
     private Vector<Room> hotelRooms = new Vector<>();
+    public List<HotelGuide> hotelGuides = new ArrayList<>();
 
 
 
